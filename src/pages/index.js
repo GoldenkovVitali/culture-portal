@@ -1,3 +1,14 @@
-import React from "react"
+import React, { Fragment } from 'react';
 
-export default () => <div>Hello world!</div>
+const Main = () => {
+  return (
+    <Fragment>
+      <header>header</header>
+      <main>portal description</main>
+      <aside>'author of the day' block</aside>
+      <footer>footer</footer>
+    </Fragment>
+  )
+}
+
+export default Main;
