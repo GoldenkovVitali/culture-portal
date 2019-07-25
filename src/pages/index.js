@@ -1,3 +1,15 @@
-import React from "react"
+import React from 'react';
+import '../scss/main.scss';
 
-export default () => <div>Hello world!</div>
+const Main = () => {
+  return (
+    <div className="main-wrapper">
+      <header className="header-section">header</header>
+      <main className="main-section">portal description</main>
+      <aside className="aside-section">'author of the day' block</aside>
+      <footer className="footer-section">footer</footer>
+    </div>
+  )
+}
+
+export default Main;
