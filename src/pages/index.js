@@ -1,13 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import '../scss/main.scss';
 
 const Main = () => {
   return (
-    <Fragment>
-      <header>header</header>
-      <main>portal description</main>
-      <aside>'author of the day' block</aside>
-      <footer>footer</footer>
-    </Fragment>
+    <div className="main-wrapper">
+      <header className="header-section">header</header>
+      <main className="main-section">portal description</main>
+      <aside className="aside-section">'author of the day' block</aside>
+      <footer className="footer-section">footer</footer>
+    </div>
   )
 }
 
