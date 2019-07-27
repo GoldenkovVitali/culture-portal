@@ -1,0 +1,63 @@
+.producer-card {
+  display: flex;
+  border: 0.5px solid	rgb(128,128,128);
+  width: 565px;
+  height: 400px;
+}
+
+.producer-card__info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.producer-card__info-main p{
+  text-align: center;
+}
+
+.producer-card__info-main:nth-child(1)>{
+  color: rebeccapurple;
+  background-color: aqua;
+}
+
+.producer-card__info-birth {
+  margin-bottom: 0;
+}
+
+.producer-card__info-description p{
+  text-align: justify;
+}
+
+.producer-card__info-main{
+  text-transform: uppercase;
+  height: 130px;
+  padding: 0px 30px;
+}
+
+.producer-card__info-description {
+  height: 200px;
+  padding: 0 30px;
+}
+
+.producer-card__learn-more-button {
+  text-transform: uppercase;
+  margin: 30px auto;
+  padding: 0;
+  outline: none;
+  border: 0.5px solid 	rgb(128,128,128);
+  color: 	rgb(128,128,128);
+  background-color: white;
+}
+
+.producer-card__learn-more-button span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.producer-card__image img {
+  height: 100%;
+  width: 300px;
+}
+
+
+
