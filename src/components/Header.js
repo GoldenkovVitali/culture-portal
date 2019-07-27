@@ -7,10 +7,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'gatsby';
-import { blackColor, greyColor } from '../scss/colors.scss';
+import { blackColor, greyColor, whiteColor } from '../scss/colors.scss';
 
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    background: whiteColor,
+  },
   button: {
     marginRight: theme.spacing(2),
     background: greyColor,
@@ -49,7 +52,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static" className="header-section">
+    <AppBar position="static" className={`header-section ${classes.root}`}>
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
             Culture Portal
