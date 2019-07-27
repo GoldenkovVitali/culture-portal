@@ -1,0 +1,63 @@
+.author-wrapper {
+  font-size: 1.2rem;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "header-section header-section header-section header-section"
+    "author-card-section author-card-section main-section main-section";
+
+  .header-section {
+    grid-area: header-section;
+    background: grey;
+  }
+
+  .author-card-section {
+    grid-area: author-card-section;
+    background: grey;
+  }
+
+  .main-section {
+    grid-area: main-section;
+    background: grey;
+    color: white;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "biography"
+      "timeline"
+      "gallery"
+      "map";
+
+    .biography {
+      grid-area: biography;
+      background: black;
+    }
+
+    .timeline {
+      grid-area: timeline;
+      background: black;
+    }
+
+    .gallery {
+      grid-area: gallery;
+      background: black;
+    }
+
+    .map {
+      grid-area: map;
+      background: black;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px)   {
+  .author-wrapper {
+    grid-template-areas:
+      "header-section header-section header-section header-section"
+      "author-card-section author-card-section author-card-section author-card-section"
+      "main-section main-section main-section main-section";
+  }
+}
