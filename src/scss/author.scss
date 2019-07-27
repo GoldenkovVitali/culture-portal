@@ -1,3 +1,5 @@
+@import 'colors';
+
 .author-wrapper {
   font-size: 1.2rem;
   display: grid;
@@ -9,18 +11,18 @@
 
   .header-section {
     grid-area: header-section;
-    background: grey;
+    background: $grey-color;
   }
 
   .author-card-section {
     grid-area: author-card-section;
-    background: grey;
+    background: $grey-color;
   }
 
   .main-section {
     grid-area: main-section;
-    background: grey;
-    color: white;
+    background: $grey-color;
+    color: $white-color;
 
     display: grid;
     grid-gap: 10px;
@@ -33,22 +35,22 @@
 
     .biography {
       grid-area: biography;
-      background: black;
+      background: $black-color;
     }
 
     .timeline {
       grid-area: timeline;
-      background: black;
+      background: $black-color;
     }
 
     .gallery {
       grid-area: gallery;
-      background: black;
+      background: $black-color;
     }
 
     .map {
       grid-area: map;
-      background: black;
+      background: $black-color;
     }
   }
 }
