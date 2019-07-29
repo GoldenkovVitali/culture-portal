@@ -1,6 +1,7 @@
 import React from 'react';
 import '../scss/generic.scss';
 import '../scss/author.scss';
+import Map from '../components/map/map';
 
 const AuthorPage = () => (
   <div className="author-wrapper">
@@ -10,7 +11,7 @@ const AuthorPage = () => (
       <section className="biography">biography</section>
       <section className="timeline">timeline</section>
       <section className="gallery">gallery</section>
-      <section className="map">map</section>
+      <Map />
     </main>
   </div>
 );
