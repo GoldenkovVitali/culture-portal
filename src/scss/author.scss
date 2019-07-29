@@ -4,7 +4,7 @@
   font-size: 1.2rem;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto 350px 350px;
   grid-template-areas:
     "header-section header-section header-section header-section"
     "author-card-section author-card-section main-section main-section";
@@ -39,8 +39,73 @@
     }
 
     .timeline {
+      $index-height: 30px;
       grid-area: timeline;
-      background: $black-color;
+      position: relative;
+      display: block;
+      height: 400px;
+      overflow: scroll;
+        .item-container {
+          display: flex;
+          justify-content: space-around;
+          position: relative;
+        .index {
+          
+          width: 20%;
+          display: inline-block;
+          position: relative;
+          background-color: red;
+          text-align: center;
+          -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+          height: $index-height;
+          p {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content:center;
+            align-content:center;
+            flex-direction:column;
+          }
+        }
+        .content:before {
+          content: "";
+          top: calc(#{$index-height}  / 2 - 8px);
+          left: -28px;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+          border: 3px solid;
+          background: #fff;
+          border-color:grey;
+        }
+        .content{
+          width: 70%;
+          position: relative;
+          display: block;
+          background-color: rgba(1,1,1,0.3);
+          border-radius: 5px;
+          box-shadow: 5px 5px 10px rgba(1, 1, 1, 0.5);
+          p {
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+        }
+      }
+      .item-container:not(:first-child){
+        margin-top: 25px;
+      } 
+    &:before{
+        content: "";
+        position: absolute;
+        left: 24.5%;
+        width: 3px;
+        height: 100%;
+        background-color: grey;
+        border-radius: 6px;
+      }
     }
 
     .gallery {
