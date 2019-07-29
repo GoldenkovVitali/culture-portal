@@ -13,18 +13,21 @@ import { blackColor, greyColor, whiteColor } from '../../scss/colors.scss';
 const useStyles = makeStyles(theme => ({
   root: {
     background: whiteColor,
+
   },
   button: {
     marginRight: theme.spacing(2),
-    background: greyColor,
     color: blackColor,
-    fontWeight: '700',
+    '&:hover':{
+      textDecoration: 'underline'
+    },
   },
   buttonLang: {
     marginRight: 0,
-    background: greyColor,
     color: blackColor,
-    fontWeight: '700',
+    '&:hover':{
+      textDecoration: 'underline'
+    },
   },
   title: {
     flexGrow: 1,
