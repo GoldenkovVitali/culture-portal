@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Paper from '@material-ui/core/Paper';
@@ -7,8 +8,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'gatsby';
-import { blackColor, greyColor, whiteColor } from '../scss/colors.scss';
-
+import { blackColor, greyColor, whiteColor } from '../../scss/colors.scss';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -16,6 +16,12 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     marginRight: theme.spacing(2),
+    background: greyColor,
+    color: blackColor,
+    fontWeight: '700',
+  },
+  buttonLang: {
+    marginRight: 0,
     background: greyColor,
     color: blackColor,
     fontWeight: '700',
@@ -35,11 +41,16 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
   },
   option: {
-    margin: '5px 10px',
+    margin: '0',
+    width: '100%',
+    cursor: 'pointer',
+    background: 'transparent',
+    border: 'none',
+    padding: '5px 0',
   },
 }));
 
-const Header = () => {
+const Header = ({ lang, changeLang }) => {
   const [open, setOpen] = React.useState(false);
   const classes = useStyles();
 
@@ -49,6 +60,15 @@ const Header = () => {
 
   const handleClickAway = () => {
     setOpen(false);
+  };
+
+  const handleLangOptionChange = ({ target }) => {
+    let currElement = target;
+    while (!currElement.dataset.lang) {
+      currElement = currElement.parentElement;
+    }
+    changeLang(currElement.dataset.lang);
+    handleClickAway();
   };
 
   return (
@@ -63,12 +83,33 @@ const Header = () => {
         <div className={classes.dropDownContainer}>
           <ClickAwayListener onClickAway={handleClickAway}>
             <div>
-              <Button className={classes.button} onClick={handleClick}>Language</Button>
+              <Button className={classes.buttonLang} onClick={handleClick}>{lang}</Button>
               {open ? (
                 <Paper className={classes.paper}>
-                  <div className={classes.option}><span>ru</span></div>
-                  <div className={classes.option}><span>en</span></div>
-                  <div className={classes.option}><span>by</span></div>
+                  <button
+                    type="button"
+                    data-lang="ru"
+                    className={classes.option}
+                    onClick={handleLangOptionChange}
+                  >
+                    ru
+                  </button>
+                  <button
+                    type="button"
+                    data-lang="en"
+                    className={classes.option}
+                    onClick={handleLangOptionChange}
+                  >
+                    en
+                  </button>
+                  <button
+                    type="button"
+                    data-lang="by"
+                    className={classes.option}
+                    onClick={handleLangOptionChange}
+                  >
+                    by
+                  </button>
                 </Paper>
               ) : null}
             </div>
@@ -77,6 +118,11 @@ const Header = () => {
       </Toolbar>
     </AppBar>
   );
+};
+
+Header.propTypes = {
+  lang: PropTypes.string.isRequired,
+  changeLang: PropTypes.func.isRequired,
 };
 
 export default Header;
