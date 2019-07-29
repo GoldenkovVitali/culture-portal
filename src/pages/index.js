@@ -1,7 +1,7 @@
 import React from 'react';
 import '../scss/generic.scss';
 import '../scss/main.scss';
-import DirectorCard from '../components/producerCard/producerCard';
+import DirectorCard from '../components/directorCard/directorCard';
 
 const Main = () => (
   <div className="main-wrapper">
@@ -17,7 +17,7 @@ const Main = () => (
     </main>
     <aside className="aside-section">
       <div>
-      <h3>PRODUCER OF THE DAY</h3>
+      <h3>DIRECTOR OF THE DAY</h3>
       <DirectorCard />
       </div>
     </aside>

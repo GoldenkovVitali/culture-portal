@@ -1,5 +1,5 @@
 import React from 'react';
-import './producerCard.scss';
+import './directorCard.scss';
 
 
 export default class CulturePortalInfo extends React.Component {
