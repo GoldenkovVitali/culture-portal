@@ -1,8 +1,8 @@
 import React from 'react';
-import './producerCard.scss';
+import './directorCard.scss';
 
 
-export default class ProducerCard extends React.Component {
+export default class DirectorCard extends React.Component {
   render() {
     return (
       <div className="producer-card">

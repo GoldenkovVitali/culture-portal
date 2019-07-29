@@ -1,7 +1,7 @@
 import React from 'react';
 import '../scss/generic.scss';
 import '../scss/main.scss';
-import ProducerCard from '../components/producerCard/producerCard';
+import DirectorCard from '../components/producerCard/producerCard';
 
 const Main = () => (
   <div className="main-wrapper">
@@ -18,7 +18,7 @@ const Main = () => (
     <aside className="aside-section">
       <div>
       <h3>PRODUCER OF THE DAY</h3>
-      <ProducerCard />
+      <DirectorCard />
       </div>
     </aside>
     <footer className="footer-section">footer</footer>
