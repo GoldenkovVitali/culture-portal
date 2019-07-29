@@ -86,30 +86,36 @@ const Header = ({ lang, changeLang }) => {
               <Button className={classes.buttonLang} onClick={handleClick}>{lang}</Button>
               {open ? (
                 <Paper className={classes.paper}>
-                  <button
-                    type="button"
-                    data-lang="ru"
-                    className={classes.option}
-                    onClick={handleLangOptionChange}
-                  >
+                  {lang !== 'ru' ? (
+                    <button
+                      type="button"
+                      data-lang="ru"
+                      className={classes.option}
+                      onClick={handleLangOptionChange}
+                    >
                     ru
-                  </button>
-                  <button
-                    type="button"
-                    data-lang="en"
-                    className={classes.option}
-                    onClick={handleLangOptionChange}
-                  >
+                    </button>
+                  ) : null}
+                  {lang !== 'en' ? (
+                    <button
+                      type="button"
+                      data-lang="en"
+                      className={classes.option}
+                      onClick={handleLangOptionChange}
+                    >
                     en
-                  </button>
-                  <button
-                    type="button"
-                    data-lang="by"
-                    className={classes.option}
-                    onClick={handleLangOptionChange}
-                  >
+                    </button>
+                  ) : null}
+                  {lang !== 'by' ? (
+                    <button
+                      type="button"
+                      data-lang="by"
+                      className={classes.option}
+                      onClick={handleLangOptionChange}
+                    >
                     by
-                  </button>
+                    </button>
+                  ) : null}
                 </Paper>
               ) : null}
             </div>
