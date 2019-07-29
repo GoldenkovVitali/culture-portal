@@ -9,7 +9,7 @@ const AuthorPage = () => (
     <aside className="author-card-section">author card</aside>
     <main className="main-section">
       <section className="biography">biography</section>
-      <section className="timeline">
+      <section className="timeline" id="timeline">
         <Timeline />
       </section>
       <section className="gallery">gallery</section>
