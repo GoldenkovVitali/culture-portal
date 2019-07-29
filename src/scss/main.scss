@@ -1,5 +1,5 @@
 .main-wrapper {
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: auto auto auto;
@@ -14,12 +14,10 @@
 
   .main-section {
     grid-area: main-section;
-    background: grey;
   }
 
   .aside-section {
     grid-area: aside-section;
-    background: grey;
   }
 
   .footer-section {
@@ -27,6 +25,12 @@
     background: grey;
   }
 }
+
+article {
+  -webkit-column-count:2;
+  -moz-column-count:2;
+  column-count:2;
+}  
 
 @media only screen and (max-width: 767px)   {
   .main-wrapper {
