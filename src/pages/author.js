@@ -4,7 +4,7 @@ import '../scss/author.scss';
 import Map from '../components/map/map';
 
 const AuthorPage = (data) => {
-  console.log('data', data);    // data in data.location.state
+  console.log('data', data); // data in data.location.state
   return (
     <div className="author-wrapper">
       <header className="header-section">header</header>
@@ -17,6 +17,6 @@ const AuthorPage = (data) => {
       </main>
     </div>
   );
-}
+};
 
 export default AuthorPage;
