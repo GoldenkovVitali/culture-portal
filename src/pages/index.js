@@ -4,6 +4,7 @@ import '../scss/main.scss';
 import DirectorCard from '../components/directorCard/directorCard';
 import Header from '../components/Header/Header';
 import CarouselComponent from '../components/carousel/Carousel';
+import '../language';
 
 class Main extends Component {
   state = {

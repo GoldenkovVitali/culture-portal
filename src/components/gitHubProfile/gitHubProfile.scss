@@ -1,12 +1,13 @@
 .github-card {
-  display: flex;
+  display: block;
   flex-direction: column;
-  height: 120px;
-  width: 120px;
-  border-radius: 60px;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
+  margin: auto;
   &:hover{
     transform: scale(1.05);
     transition: 0.3s ease;

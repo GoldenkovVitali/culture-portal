@@ -48,6 +48,23 @@ const CarouselComponent = () => (
         image="https://avatars2.githubusercontent.com/u/25455143?s=460&v=4"
       />
     </div>
+    <div className="carousel-item">
+      <GitHubProfile
+        name="Anton Yahorau"
+        git="antosha33"
+        image="https://avatars1.githubusercontent.com/u/28390094?s=400&v=4"
+      />
+      <GitHubProfile
+        name="Yury Chuchvaha"
+        git="uniorunr"
+        image="https://avatars2.githubusercontent.com/u/33601725?s=460&v=4"
+      />
+      <GitHubProfile
+        name="Yauheni Dauhala"
+        git="edovgalo"
+        image="https://avatars0.githubusercontent.com/u/44709906?s=460&v=4"
+      />
+    </div>
   </Carousel>
 );
 
