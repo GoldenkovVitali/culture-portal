@@ -24,7 +24,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-visibility-sensor": "^5.1.1"
+    "react-visibility-sensor": "^5.1.1",
+    "vertical-timeline-component-for-react": "^1.0.6"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
