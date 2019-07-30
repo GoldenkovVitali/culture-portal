@@ -3,6 +3,7 @@ import '../scss/generic.scss';
 import '../scss/main.scss';
 import DirectorCard from '../components/directorCard/directorCard';
 import Header from '../components/Header/Header';
+import '../language';
 
 class Main extends Component {
   state = {
