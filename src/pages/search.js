@@ -1,7 +1,7 @@
 import React from 'react';
 import '../scss/generic.scss';
 import '../scss/search.scss';
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 const SearchPage = ({ data }) => {
 
