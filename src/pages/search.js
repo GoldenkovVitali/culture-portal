@@ -1,36 +1,30 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { Link, graphql } from 'gatsby';
 import '../scss/generic.scss';
 import '../scss/search.scss';
-import { Link, graphql } from "gatsby";
 
 const SearchPage = ({ data }) => {
-
   console.log(data);
 
   return (
-    <div className="search-wrapper">
-      <header className="header-section">header</header>
+    <Fragment>
       <section className="search-section">search bar</section>
-
       <section className="list-section">
         <h2>Genereate Links by GraphQl:</h2>
         <ul>
           {
-
             data.allContentfulPerson.edges.map(({ node }) => (
               <li key={node.idPage}>
-                <Link to={'/author'} state={node}>{node.nameRu}</Link>
+                <Link to="/author" state={node}>{node.nameRu}</Link>
               </li>
             ))
-
-          }
+            }
         </ul>
       </section>
-
       <main className="main-section">cards</main>
-    </div>
+    </Fragment>
   );
-}
+};
 
 export default SearchPage;
 
@@ -91,4 +85,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
