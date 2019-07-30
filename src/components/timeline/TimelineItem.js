@@ -26,31 +26,29 @@ class TimelineItem extends React.Component {
     const { visible } = this.state;
     const { index, content } = this.props;
     const itemContainerStyle = {
-      display: 'flex',
-      justifyContent: 'space-around',
-      position: 'relative',
       visibility: 'visible',
     };
-
     const partialVisibility = true;
     const scrollCheck = true;
-    return (
-      <>
-        <VisibilitySensor scrollCheck={scrollCheck} containment={this.state.elem} onChange={this.onChange} partialVisibility={partialVisibility} minTopValue={10}>
-          <div className={`${visible ? 'animated fadeIn' : ''} item-container`} style={visible ? itemContainerStyle : { visibility: 'hidden' }}>
-            <div className="index">
-              <p>{index}</p>
+    const { elem } = this.state;
+    if (elem !== undefined) {
+      return (
+        <>
+          <VisibilitySensor scrollCheck={scrollCheck} containment={elem} onChange={this.onChange} partialVisibility={partialVisibility} minTopValue={5}>
+            <div className={`${visible ? 'animated bounceInUp slow' : ''} item-container`} style={visible ? itemContainerStyle : { visibility: 'hidden' }}>
+              <div className="index">
+                <p>{index}</p>
+              </div>
+              <div className="content">
+                <p>{content}</p>
+              </div>
             </div>
-            <div className="content">
-              <p>{content}</p>
-            </div>
-          </div>
-        </VisibilitySensor>
-      </>
-    );
+          </VisibilitySensor>
+        </>
+      );
+    }
+    return <div />;
   }
-
-
 }
 
 TimelineItem.propTypes = {

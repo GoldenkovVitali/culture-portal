@@ -45,14 +45,14 @@
       display: block;
       height: 250px;
       overflow-y: auto;
-      .timeline-conatiner{
-        
-      }
       .animated {
-        animation-duration: 3s;
+        animation-duration: 1s;
         animation-delay: 0s;
       }
       .item-container {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
         visibility: hidden;
         .index {
           width: 20%;
@@ -62,6 +62,7 @@
           text-align: center;
           -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+          border-radius: 6px;
           height: $index-height;
           p {
             margin: 0;
