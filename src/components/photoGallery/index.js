@@ -10,11 +10,9 @@ import imageTwo from '../../../static/2.jpg';
 import imageThree from '../../../static/3.jpg';
 import imageFour from '../../../static/4.jpg';
 
-const PhotoGallery = ({
-  arrImageUrl = [imageOne, imageTwo, imageThree, imageFour, imageFour],
-}) => {
+const PhotoGallery = ({ arrImageUrl = [imageOne, imageTwo, imageThree, imageFour] }) => {
   const images = arrImageUrl.map(item => (
-    <div>
+    <div key={item}>
       <img src={item} alt="icon of work" />
     </div>
   ));
