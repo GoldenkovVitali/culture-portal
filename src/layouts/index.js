@@ -1,5 +1,18 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Header from '../components/Header/Header';
+
+const returnPrefix = (path) => {
+  const normalized = path.replace('/', '').replace('/', '');
+  switch (normalized) {
+    case '':
+      return 'main';
+    case 'search':
+      return 'search';
+    case 'author':
+      return 'author';
+    default: return Error('no case founded');
+  }
+};
 
 class Layout extends Component {
   state = {
@@ -13,14 +26,15 @@ class Layout extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, location } = this.props;
     const { language } = this.state;
+    const selectorForWrapper = returnPrefix(location.pathname);
 
     return (
-      <Fragment>
+      <div className={`${selectorForWrapper}-wrapper`}>
         <Header lang={language} changeLang={this.changeLanguage} />
         {children}
-      </Fragment>
+      </div>
     );
   }
 }
