@@ -34,7 +34,13 @@ class TimelineItem extends React.Component {
     if (elem !== undefined) {
       return (
         <>
-          <VisibilitySensor scrollCheck={scrollCheck} containment={elem} onChange={this.onChange} partialVisibility={partialVisibility} minTopValue={5}>
+          <VisibilitySensor
+            scrollCheck={scrollCheck}
+            containment={elem}
+            onChange={this.onChange}
+            partialVisibility={partialVisibility}
+            minTopValue={5}
+          >
             <div className={`${visible ? 'animated bounceInUp slow' : ''} item-container`} style={visible ? itemContainerStyle : { visibility: 'hidden' }}>
               <div className="index">
                 <p>{index}</p>
