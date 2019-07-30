@@ -6,7 +6,7 @@ export default class DirectorCard extends React.Component {
 
   constructor() {
     super();
-    this.state = { val: 1 };
+    this.state = { val: 0 };
   }
 
   render() {
@@ -72,8 +72,6 @@ export default class DirectorCard extends React.Component {
       `}
         render={data => (
           <header>
-            <h1>{JSON.stringify(data.allContentfulPerson.edges[this.state.val].node.descriptionRu)}</h1>
-
             <div className="director-card">
               <div className="director-card__image">
                 <img src={data.allContentfulPerson.edges[this.state.val].node.img.file.url} alt="director photo" />
