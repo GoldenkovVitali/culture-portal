@@ -18,15 +18,15 @@ const useStyles = makeStyles(theme => ({
   button: {
     marginRight: theme.spacing(2),
     color: blackColor,
-    '&:hover':{
-      textDecoration: 'underline'
+    '&:hover': {
+      textDecoration: 'underline',
     },
   },
   buttonLang: {
     marginRight: 0,
     color: blackColor,
-    '&:hover':{
-      textDecoration: 'underline'
+    '&:hover': {
+      textDecoration: 'underline',
     },
   },
   title: {
