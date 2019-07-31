@@ -32,7 +32,6 @@ class SearchPage extends Component {
           <SearchInput className="search-input" onChange={this.searchUpdated} />
         </section>
         <section className="main-section">
-          <h2>Genereate Links by GraphQl:</h2>
           <ul>
             {
               filteredEmails.map(({ node }) => (

@@ -14,12 +14,26 @@
 
   .search-section {
     grid-area: search-section;
-    background: grey;
+    display: flex;
+    justify-content: center;
+
+    .search-input {
+      width: 80%;
+
+      input {
+        width: 100%;
+        padding: 10px 15px;
+        outline: none;
+      }
+
+      input:focus {
+        border: 2px solid black;
+      }
+    }
   }
 
   .main-section {
     grid-area: main-section;
-    background: grey;
   }
 }
 
