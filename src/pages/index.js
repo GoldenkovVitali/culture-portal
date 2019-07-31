@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import '../scss/generic.scss';
 import '../scss/main.scss';
 import DirectorCard from '../components/directorCard/directorCard';
+import Footer from '../components/Footer/Footer';
 import '../language';
 
 const Main = () => (
@@ -23,7 +24,7 @@ const Main = () => (
         <DirectorCard />
       </div>
     </aside>
-    <footer className="footer-section">footer</footer>
+    <Footer />
   </Fragment>
 );
 
