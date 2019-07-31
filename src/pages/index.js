@@ -23,19 +23,24 @@ class Main extends Component {
     return (
       <div className="main-wrapper">
         <Header lang={language} changeLang={this.changeLanguage} />
-        <div className='main'>
-          <aside className="aside-section">
+        <main className="main-section">
+          <section className="portal-description-section">
             <div>
               <h3>Culture Portal</h3>
               <article>
-                A film director is a person who directs the making of a film. A film director controls a film's artistic and dramatic aspects and visualizes the screenplay (or script) while guiding the technical crew and actors in the fulfilment of that vision. The director has a key role in choosing the cast members, production design, and the creative aspects of filmmaking. Under European Union law, the director is viewed as the author of the film.
-            </article>
+                A film director is a person who directs the making of a film.
+                A film director controls a film's artistic and dramatic aspects and visualizes
+                the screenplay (or script) while guiding the technical crew and actors in the
+                fulfilment of that vision. The director has a key role in choosing
+                the cast members, production design, and the creative aspects of filmmaking.
+                Under European Union law, the director is viewed as the author of the film.
+              </article>
             </div>
-          </aside>
-          <main className="main-section">
+          </section>
+          <section className="director-card-section">
             <DirectorCard />
-          </main>
-        </div>
+          </section>
+        </main>
         <Footer />
       </div>
     );

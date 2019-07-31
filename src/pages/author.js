@@ -14,7 +14,7 @@ const AuthorPage = (data) => {
         <section className="biography">biography</section>
         <section className="timeline">timeline</section>
         <section className="gallery"><Gallery /></section>
-        <Map content={data.location.state.map} />
+        <Map content={{ id: 'suck' }} />
       </main>
     </div>
   );
