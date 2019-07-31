@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation, Trans } from "react-i18next";
+
 import { makeStyles } from '@material-ui/core/styles';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Paper from '@material-ui/core/Paper';
@@ -13,18 +15,21 @@ import { blackColor, greyColor, whiteColor } from '../../scss/colors.scss';
 const useStyles = makeStyles(theme => ({
   root: {
     background: whiteColor,
+
   },
   button: {
     marginRight: theme.spacing(2),
-    background: greyColor,
     color: blackColor,
-    fontWeight: '700',
+    '&:hover': {
+      textDecoration: 'underline',
+    },
   },
   buttonLang: {
     marginRight: 0,
-    background: greyColor,
     color: blackColor,
-    fontWeight: '700',
+    '&:hover': {
+      textDecoration: 'underline',
+    },
   },
   title: {
     flexGrow: 1,
@@ -62,6 +67,12 @@ const Header = ({ lang, changeLang }) => {
     setOpen(false);
   };
 
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = lng => {
+    i18n.changeLanguage(lng);
+  };
+
   const handleLangOptionChange = ({ target }) => {
     let currElement = target;
     while (!currElement.dataset.lang) {
@@ -69,13 +80,16 @@ const Header = ({ lang, changeLang }) => {
     }
     changeLang(currElement.dataset.lang);
     handleClickAway();
+    return changeLanguage(target.innerText);
   };
 
   return (
     <AppBar position="static" className={`header-section ${classes.root}`}>
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-            Culture Portal
+            <Trans>
+              Culture Portal
+            </Trans>
         </Typography>
         <Link to="/search">
           <Button className={classes.button} color="primary">All Directors</Button>

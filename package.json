@@ -24,8 +24,13 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+<<<<<<< HEAD
     "react-visibility-sensor": "^5.1.1",
     "vertical-timeline-component-for-react": "^1.0.6"
+=======
+    "i18next": "15.0.6",
+    "react-i18next": "^10.11.4"
+>>>>>>> master
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",

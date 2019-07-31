@@ -22,15 +22,17 @@
 
   .footer-section {
     grid-area: footer-section;
-    background: grey;
+    border-top: 0.5px solid rgb(128, 128, 128);
+  }
+
+  article {
+    -webkit-column-count:2;
+    -moz-column-count:2;
+    column-count:2;
+    text-align: justify;
+    margin: 0 20px;
   }
 }
-
-article {
-  -webkit-column-count:2;
-  -moz-column-count:2;
-  column-count:2;
-}  
 
 @media only screen and (max-width: 767px)   {
   .main-wrapper {
