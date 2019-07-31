@@ -52,7 +52,11 @@
 
 .director-card__image img {
   height: 100%;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 180px;
+  min-height: 200px;
 }
 
 

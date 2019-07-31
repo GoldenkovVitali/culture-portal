@@ -6,7 +6,7 @@ export default class DirectorCard extends React.Component {
 
   constructor() {
     super();
-    this.state = { val: 0 };
+    this.state = { val: Math.floor(Math.random() * 5) };
   }
 
   render() {
@@ -71,7 +71,7 @@ export default class DirectorCard extends React.Component {
         }
       `}
         render={data => (
-          <header>
+          <article>
             <div className="director-card">
               <div className="director-card__image">
                 <img src={data.allContentfulPerson.edges[this.state.val].node.img.file.url} alt="director photo" />
@@ -79,7 +79,7 @@ export default class DirectorCard extends React.Component {
               <div className="director-card__info">
                 <div className="director-card__info-main">
                   <p>{data.allContentfulPerson.edges[this.state.val].node.nameRu}</p>
-                  <p className="director-card__info-birth">{data.allContentfulPerson.edges[0].node.yearsOfLife}</p>
+                  <p className="director-card__info-birth">{data.allContentfulPerson.edges[this.state.val].node.yearsOfLife}</p>
                 </div>
                 <hr align="center" width="80" size="0.5" />
                 <div className="director-card__info-description">
@@ -88,7 +88,7 @@ export default class DirectorCard extends React.Component {
                 <Link className="director-card__learn-more-button" to={'/author'} state={data.allContentfulPerson.edges[this.state.val].node}><span>learn more</span></Link>
               </div>
             </div>
-          </header>
+          </article>
         )}
       />
     );
