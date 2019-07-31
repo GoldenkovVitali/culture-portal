@@ -1,13 +1,13 @@
 import React from 'react';
 import '../../scss/author.scss';
-import PropTypes from 'prop-types';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 
-const TimelineContainer = (props) => {
+const TimelineContainer = ({ data }) => {
   const config = {
     style: {
-      color: 'gray',
+      color: 'grey',
     },
+    dateInnerStyle: { background: 'gray', color: '#000' },
     bodyContainerStyle: {
       background: '#ddd',
       padding: '20px',
@@ -15,18 +15,17 @@ const TimelineContainer = (props) => {
       boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
     },
   };
-  const dataw  = props.data;
-  const timeline = Object.keys(dataw).map(it => (
+  const { timelineEn } = data;
+  const timeline = timelineEn.map((it, index) => (
     <TimelineItem
-      key="001"
-      dateText={it}
+      key={`${index + Date()}`}
+      dateText={it.date}
       style={config.style}
       bodyContainerStyle={config.bodyContainerStyle}
+      dateInnerStyle={config.dateInnerStyle}
     >
-      <h3>Title, Company</h3>
-      <h4>Subtitle</h4>
       <p>
-        {dataw[it]}
+        {it.info}
       </p>
     </TimelineItem>
   ));
