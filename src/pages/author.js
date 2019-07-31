@@ -16,10 +16,11 @@ const AuthorPage = (data) => {
         <section className="timeline-container">
           <TimelineContainer data={data.location.state} />
         </section>
-        <section className="gallery">gallery</section>
+        <section className="gallery"><Gallery /></section>
         <Map content={data.location.state.map} />
       </main>
     </div>
-  );
+  );  
 }
 
+export default AuthorPage;
