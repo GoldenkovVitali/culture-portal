@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation, Trans } from "react-i18next";
-
 import { makeStyles } from '@material-ui/core/styles';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Paper from '@material-ui/core/Paper';
@@ -10,23 +9,25 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'gatsby';
-import { blackColor, greyColor, whiteColor } from '../../scss/colors.scss';
+import { blackColor, whiteColor } from '../../scss/colors.scss';
+import './header.scss';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
     background: whiteColor,
-
+    boxShadow: 'none',
   },
   button: {
     marginRight: theme.spacing(2),
-    color: blackColor,
+    color: whiteColor,
     '&:hover': {
       textDecoration: 'underline',
     },
   },
   buttonLang: {
     marginRight: 0,
-    color: blackColor,
+    color: whiteColor,
     '&:hover': {
       textDecoration: 'underline',
     },
@@ -36,6 +37,7 @@ const useStyles = makeStyles(theme => ({
     color: blackColor,
     fontWeight: 'bold',
   },
+
   paper: {
     position: 'absolute',
     top: 36,
@@ -85,10 +87,10 @@ const Header = ({ lang, changeLang }) => {
 
   return (
     <AppBar position="static" className={`header-section ${classes.root}`}>
-      <Toolbar>
+      <Toolbar className='header'>
         <Typography variant="h6" className={classes.title}>
             <Trans>
-              Culture Portal
+              <img className='logo' src='https://i.ibb.co/KNxxKQ8/logo-6.png' />
             </Trans>
         </Typography>
         <Link to="/search">

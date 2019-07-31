@@ -10,11 +10,7 @@ const GitHubProfile = (props) => {
         <a href={`https://github.com/${git}`} target="_blank" rel="noopener noreferrer"><img className="github-card__image" src={image} alt="" /></a>
       </div>
       <div className="label">
-        <h3>{name}</h3>
-        <h4>
-          github:
-          {git}
-        </h4>
+        <p>{name}</p>
       </div>
     </div>
   );

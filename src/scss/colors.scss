@@ -1,9 +1,17 @@
 $white-color: rgba(255, 255, 255, 1);
 $black-color: rgba(0, 0, 0, 1);
-$grey-color: rgba(200, 200, 200, 1);
+$grey-color: rgb(215,207,201);
+
 
 :export {
   whiteColor: $white-color;
   blackColor: $black-color;
   greyColor: $grey-color;
 }
+
+
+// фоновый  rgb(250, 250, 250)
+// черный rgb(174, 172, 169)
+// буквы rgb(174, 172, 169)
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Playfair Display', serif;
