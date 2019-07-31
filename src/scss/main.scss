@@ -52,6 +52,16 @@
   }
 }
 
+@media only screen and (max-width: 1023px)   {
+  .main-wrapper {
+    article {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+    }
+  }
+}
+
 @media only screen and (max-width: 767px)   {
   .main-wrapper {
     grid-template-areas:
