@@ -2,6 +2,7 @@ import React from 'react';
 import '../scss/generic.scss';
 import '../scss/author.scss';
 import Map from '../components/map/map';
+import Gallery from '../components/photoGallery';
 import TimelineContainer from '../components/timeline/TimelineContainer';
 
 const AuthorPage = (data) => {
@@ -22,4 +23,3 @@ const AuthorPage = (data) => {
   );
 }
 
-export default AuthorPage;
