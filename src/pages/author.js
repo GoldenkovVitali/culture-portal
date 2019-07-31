@@ -2,6 +2,7 @@ import React from 'react';
 import '../scss/generic.scss';
 import '../scss/author.scss';
 import Map from '../components/map/map';
+import Gallery from '../components/photoGallery';
 
 const AuthorPage = (data) => {
   console.log('data', data);    // data in data.location.state
@@ -12,7 +13,7 @@ const AuthorPage = (data) => {
       <main className="main-section">
         <section className="biography">biography</section>
         <section className="timeline">timeline</section>
-        <section className="gallery">gallery</section>
+        <section className="gallery"><Gallery /></section>
         <Map content={data.location.state.map} />
       </main>
     </div>
