@@ -3,7 +3,7 @@ import '../scss/generic.scss';
 import '../scss/main.scss';
 import DirectorCard from '../components/directorCard/directorCard';
 import Header from '../components/Header/Header';
-import CarouselComponent from '../components/carousel/Carousel';
+import Footer from '../components/Footer/Footer';
 import '../language';
 
 class Main extends Component {
@@ -40,9 +40,7 @@ class Main extends Component {
             </article>
           </div>
         </aside>
-        <footer className="footer-section">
-          <div className="carousel"><CarouselComponent /></div>
-        </footer>
+        <Footer />
       </div>
     );
   }
