@@ -29,11 +29,14 @@ class Layout extends Component {
     const { children, location } = this.props;
     const { language } = this.state;
     const selectorForWrapper = returnPrefix(location.pathname);
+    const childrenWithProps = React.Children.map(children, child => (
+      React.cloneElement(child, { language })
+    ));
 
     return (
       <div className={`${selectorForWrapper}-wrapper`}>
         <Header lang={language} changeLang={this.changeLanguage} />
-        {children}
+        {childrenWithProps}
       </div>
     );
   }
