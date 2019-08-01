@@ -5,7 +5,7 @@ const Map = ({
   content,
 }) => (
     <div>
-      {content && content.id ? <iframe className="map" title={content.id}
+      {content ? <iframe className="map"
         allowFullScreen frameBorder="0" src={`https://www.google.com/maps/embed?pb=${content}`} />
         : null}
     </div>
