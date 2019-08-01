@@ -24,22 +24,26 @@ class Main extends Component {
       <div className="main-wrapper">
         <Header lang={language} changeLang={this.changeLanguage} />
         <main className="main-section">
-          <h3>DIRECTOR OF THE DAY</h3>
-          <DirectorCard lang={this.state.language.charAt(0).toUpperCase() + this.state.language.slice(1)} />
+          <section className="portal-description-section">
+            <div>
+              <h3>Culture Portal</h3>
+              <article>
+                A theatre director or stage director is an instructor in the theatre field who oversees and
+                orchestrates the mounting of a theatre production (a play, opera, musical, or devised piece
+                of work) by unifying various endeavours and aspects of production. The director's function
+                is to ensure the quality and completeness of theatre production and to lead the members of
+                the creative team into realizing their artistic vision for it. The director thereby
+                collaborates with a team of creative individuals and other staff, coordinating research,
+                stagecraft, costume design, props, lighting design, acting, set design, stage combat, and
+                sound design for the production. If the production is a new piece of writing or a (new)
+                translation of a play, the director may also work with the playwright or a translator. 
+              </article>
+            </div>
+          </section>
+          <section className="director-card-section">
+             <DirectorCard lang={this.state.language.charAt(0).toUpperCase() + this.state.language.slice(1)} />
+          </section>
         </main>
-        <aside className="aside-section">
-          <div>
-            <h3>CULTURE PORTAL</h3>
-            <article>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero magna, venenatis
-              quis aliquet et, rutrum in augue. Donec vel tempor dolor.
-              Donec volutpat fringilla porta.
-              Suspendisse non nulla tortor. Quisque commodo ornare mi, sit amet aliquet justo
-              bibendum non. Integer bibendum convallis sapien, sit amet tincidunt orci placerat in.
-              Integer vitae consequat augue.
-            </article>
-          </div>
-        </aside>
         <Footer />
       </div>
     );
