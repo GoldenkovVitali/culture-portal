@@ -71,7 +71,6 @@ export default class DirectorCard extends React.Component {
         }
       `}
         render={data => (
-          <article>
             <div className="director-card">
               <div className="director-card__image">
                 <img src={data.allContentfulPerson.edges[this.state.val].node.img.file.url} alt="director photo" />
@@ -88,7 +87,6 @@ export default class DirectorCard extends React.Component {
                 <Link className="director-card__learn-more-button" to={'/author'} state={data.allContentfulPerson.edges[this.state.val].node}><span>learn more</span></Link>
               </div>
             </div>
-          </article>
         )}
       />
     );
