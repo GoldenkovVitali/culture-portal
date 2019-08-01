@@ -33,13 +33,11 @@ class SearchPage extends Component {
           <SearchInput className="search-input" onChange={this.searchUpdated} />
         </section>
         <section className="main-section">
-          <ul>
-            {
-              filteredEmails.map(({ node }) => (
-                <DirectorCardSearch key={node.idPage} state={node} language={language} />
-              ))
-             }
-          </ul>
+          {
+            filteredEmails.map(({ node }) => (
+              <DirectorCardSearch key={node.idPage} state={node} language={language} />
+            ))
+          }
         </section>
       </Fragment>
     );

@@ -12,6 +12,9 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   card: {
     maxWidth: 250,
+    margin: '0 auto',
+    display: 'flex',
+    flexDirection: 'column',
   },
   media: {
     height: 200,
@@ -22,6 +25,7 @@ const useStyles = makeStyles({
   },
   link: {
     color: 'black',
+    flexGrow: 1,
   },
 });
 
