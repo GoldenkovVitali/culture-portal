@@ -78,7 +78,11 @@
     }
   }
 }
-
+@media only screen and (max-width: 1000px)   {
+  .director-card {
+    margin: 0 60px;
+  }
+}
 @media only screen and (max-width: 767px)   {
   .director-card {
     display: flex;
