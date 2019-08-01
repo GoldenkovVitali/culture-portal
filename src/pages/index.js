@@ -25,7 +25,7 @@ class Main extends Component {
         <Header lang={language} changeLang={this.changeLanguage} />
         <main className="main-section">
           <h3>DIRECTOR OF THE DAY</h3>
-          <DirectorCard />
+          <DirectorCard lang={this.state.language.charAt(0).toUpperCase() + this.state.language.slice(1)} />
         </main>
         <aside className="aside-section">
           <div>
