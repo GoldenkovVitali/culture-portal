@@ -41,7 +41,7 @@ class Main extends Component {
             </div>
           </section>
           <section className="director-card-section">
-            <DirectorCard />
+             <DirectorCard lang={this.state.language.charAt(0).toUpperCase() + this.state.language.slice(1)} />
           </section>
         </main>
         <Footer />
