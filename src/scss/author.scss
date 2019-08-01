@@ -1,4 +1,4 @@
-@import 'colors';
+@import "colors";
 
 .author-wrapper {
   font-size: 1rem;
@@ -40,7 +40,8 @@
 
     .timeline {
       grid-area: timeline;
-      background: $black-color;
+      position: relative;
+      display: block;
     }
 
     .gallery {
@@ -49,13 +50,14 @@
     }
 
     .map {
+      height: 450px;
       grid-area: map;
       background: $black-color;
     }
   }
 }
 
-@media only screen and (max-width: 767px)   {
+@media only screen and (max-width: 767px) {
   .author-wrapper {
     grid-template-areas:
       "header-section header-section header-section header-section"

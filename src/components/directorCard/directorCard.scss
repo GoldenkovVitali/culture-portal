@@ -1,58 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 .director-card {
   display: flex;
-  margin: 0 20px;
-  border: 0.5px solid	rgb(128, 128, 128);
-  width: 565px;
-  height: 300px;
+  margin: 0 120px;
+  background-color: rgb(250, 250, 250);
+
+  .director-card__image {
+    img {
+      height: 400px;
+      width: 300px;
+    }
+
+    img:hover {
+      transform: scale(1.025);
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+  }
+
+  .director-card__card {
+    width: 100%;
+  }
+
+  .director-card__info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    margin: 0 auto;
+
+    .director-card__info-main {
+      h3 {
+        font-family: 'Playfair Display', serif;
+        color: #d7cfc9;
+        text-align: center;
+        font-size: 40px;
+        margin: 20px;
+      }
+
+      h3 {
+        font-family: 'Playfair Display', serif;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 40px;
+      }
+      p {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+      }
+    }
+
+    .director-card__info-description p {
+      text-align: justify;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .director-card__learn-more-button {
+      text-transform: uppercase;
+      margin: 30px auto;
+      padding: 0;
+      outline: none;
+      border: 0.5px solid rgb(174, 172, 169);
+      color: rgb(174, 172, 169);
+      background-color: white;
+    }
+
+    .director-card__learn-more-button span {
+      display: block;
+      padding: 12px 24px;
+    }
+
+    .director-card__learn-more-button :hover{
+      background-color: rgb(174, 172, 169);
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+@media only screen and (max-width: 1000px)   {
+  .director-card {
+    margin: 0 60px;
+  }
+}
+@media only screen and (max-width: 767px)   {
+  .director-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 60px;
+
+    .director-card__image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        max-width: 300px;
+        max-height: 600px;
+        margin: 10px;
+      }
+    }
+  }
 }
 
-.director-card__info {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
+@media only screen and (max-width: 500px)   {
+  .header-section {
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      h6 {
+        display: none;
+      }
+    }
+  }
 
-.director-card__info-main p{
-  text-align: center;
-}
+  .director-card {
+    margin: 0 20px;
 
-.director-card__info-birth {
-  margin-bottom: 0;
-}
-
-.director-card__info-description p{
-  text-align: justify;
-}
-
-.director-card__info-main{
-  text-transform: uppercase;
-  height: 130px;
-  padding: 0px 30px;
-}
-
-.director-card__info-description {
-  height: 200px;
-  padding: 0 30px;
-}
-
-.director-card__learn-more-button {
-  text-transform: uppercase;
-  margin: 30px auto;
-  padding: 0;
-  outline: none;
-  border: 0.5px solid 	rgb(128, 128, 128);
-  color: 	rgb(128, 128, 128);
-  background-color: white;
-}
-
-.director-card__learn-more-button span {
-  display: block;
-  padding: 12px 24px;
-}
-
-.director-card__image img {
-  height: 100%;
-  width: 300px;
+    .director-card__info {
+      padding: 0 20px;
+    }
+  }
 }
 
 

@@ -1,5 +1,5 @@
 .github-card-wrapper {
-  margin: 10px 5px;
+  margin: 20px 5px 10px;
 
   .github-card {
     display: block;
@@ -20,25 +20,35 @@
     img {
       width: 100%;
     }
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background-color: #d7cfc9;
+      opacity: 0.3;
+    }
+
+    .overlay:hover {
+      opacity: 0;
+    }
   }
   .label {
-    padding-top: 15px;
+    padding-top: 5px;
     color: rgb(63, 61, 61);
     width: fit-content;
     line-height: 12px;
     margin: auto;
-    h3 {
-      text-align: center;
-      font-size: 12px;
-      margin: 5px 0;
-      text-transform: uppercase;
-    }
-    h4 {
-      text-align: center;
-      font-size: 12px;
-      margin: 0;
-    }
+    text-align: center;
   }
+  .label p {
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    color: rgb(255, 255, 255);
+    padding: 0;
+  }
+
 }
 
 
