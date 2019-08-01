@@ -74,7 +74,7 @@ export default class DirectorCard extends React.Component {
           <article>
             <div className="director-card">
               <div className="director-card__image">
-                <img src={data.allContentfulPerson.edges[this.state.val].node.img.file.url} alt="director photo" />
+                <img src={data.allContentfulPerson.edges[this.state.val].node.img.file ? data.allContentfulPerson.edges[this.state.val].node.img.file.url : ""} alt="director photo" />
               </div>
               <div className="director-card__info">
                 <div className="director-card__info-main">
