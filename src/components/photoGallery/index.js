@@ -15,7 +15,7 @@ const PhotoGallery = ({ arrImageUrl }) => {
 
   return (
     <div className="photo-gallery">
-      <Carousel>{images}</Carousel>
+      <Carousel autoPlay>{images}</Carousel>
     </div>
   );
 };
