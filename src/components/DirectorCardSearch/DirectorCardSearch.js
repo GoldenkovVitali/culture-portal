@@ -32,7 +32,6 @@ const useStyles = makeStyles({
 const DirectorCardSearch = ({ state, language }) => {
   const classes = useStyles();
   const langCapitalized = `${language.charAt(0).toUpperCase()}${language.slice(1)}`;
-  console.log(state, langCapitalized);
 
   return (
     <Card className={classes.card}>

@@ -5,15 +5,12 @@ import DirectorCardSearch from '../components/DirectorCardSearch/DirectorCardSea
 import '../scss/generic.scss';
 import '../scss/search.scss';
 
-const KEYS_TO_FILTERS = ['node.nameRu'];
-
 class SearchPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       searchTerm: '',
     };
-    this.searchUpdated = this.searchUpdated.bind(this);
   }
 
   searchUpdated = (term) => {
@@ -23,9 +20,10 @@ class SearchPage extends Component {
   render() {
     const { data, language } = this.props;
     const { searchTerm } = this.state;
+    const keysToFilter = [`node.name${language.charAt(0).toUpperCase()}${language.slice(1)}`];
     const filteredEmails = data
       .allContentfulPerson
-      .edges.filter(createFilter(searchTerm, KEYS_TO_FILTERS));
+      .edges.filter(createFilter(searchTerm, keysToFilter));
 
     return (
       <Fragment>
