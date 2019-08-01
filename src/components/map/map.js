@@ -2,7 +2,7 @@ import React from 'react';
 import './map.scss';
 
 const Map = ({
-  content
+  content,
 }) => (
     <div>
       {content ? <iframe className="map"

@@ -3,6 +3,7 @@ import '../scss/generic.scss';
 import '../scss/author.scss';
 import Map from '../components/map/map';
 import Gallery from '../components/photoGallery';
+import TimelineContainer from '../components/timeline/TimelineContainer';
 import Page404 from '../components/page404/page404';
 
 const AuthorPage = (data) => {
@@ -14,7 +15,9 @@ const AuthorPage = (data) => {
         <aside className="author-card-section">author card</aside>
         <main className="main-section">
           <section className="biography">biography</section>
-          <section className="timeline">timeline</section>
+          <section className="timeline-container">
+            <TimelineContainer data={data.location.state} />
+          </section>
           <section className="gallery"><Gallery /></section>
           <Map content={data.location.state.map} />
         </main>
