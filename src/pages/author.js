@@ -37,7 +37,7 @@ const AuthorPage = (_data) => {
       }
     }
   }
-  
+
   return (
     <div>
       {data && data.location.state ? <div className="author-wrapper">
@@ -52,7 +52,7 @@ const AuthorPage = (_data) => {
             <TimelineContainer data={data.location.state} />
           </section>
           <section className="gallery">
-            <Gallery />
+            <Gallery arrImageUrl={data.location.state.gallery}/>
           </section>
           <Map content={data.location.state.map} />
         </main>

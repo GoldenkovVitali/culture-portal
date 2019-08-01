@@ -5,15 +5,11 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import './style.scss';
 
-import imageOne from '../../../static/1.jpg';
-import imageTwo from '../../../static/2.jpg';
-import imageThree from '../../../static/3.jpg';
-import imageFour from '../../../static/4.jpg';
 
-const PhotoGallery = ({ arrImageUrl = [imageOne, imageTwo, imageThree, imageFour] }) => {
+const PhotoGallery = ({ arrImageUrl }) => {
   const images = arrImageUrl.map(item => (
-    <div key={item}>
-      <img src={item} alt="icon of work" />
+    <div key={item.file.url}>
+      <img src={item.file.url} alt="icon of work" />
     </div>
   ));
 
@@ -25,11 +21,15 @@ const PhotoGallery = ({ arrImageUrl = [imageOne, imageTwo, imageThree, imageFour
 };
 
 PhotoGallery.propTypes = {
-  arrImageUrl: PropTypes.arrayOf(PropTypes.string),
+  arrImageUrl: PropTypes.arrayOf(PropTypes.shape({
+    file: PropTypes.shape({
+      url: PropTypes.string,
+    }),
+  })),
 };
 
-// PhotoGallery.defaultProps = {
-//   arrImageUrl: [],
-// };
+PhotoGallery.defaultProps = {
+  arrImageUrl: [{ file: { url: '' } }],
+};
 
 export default PhotoGallery;
