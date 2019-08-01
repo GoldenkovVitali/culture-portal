@@ -26,7 +26,7 @@ const Main = ({ language }) => (
         </div>
       </section>
       <section className="director-card-section">
-        <DirectorCard lang={language.charAt(0).toUpperCase() + language.slice(1)} />
+        <DirectorCard lang={`${language.charAt(0).toUpperCase()}${language.slice(1)}`} />
       </section>
     </main>
     <Footer />

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import SearchInput, { createFilter } from 'react-search-input';
+import DirectorCardSearch from '../components/DirectorCardSearch/DirectorCardSearch';
 import '../scss/generic.scss';
 import '../scss/search.scss';
 
@@ -20,7 +21,7 @@ class SearchPage extends Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, language } = this.props;
     const { searchTerm } = this.state;
     const filteredEmails = data
       .allContentfulPerson
@@ -35,9 +36,7 @@ class SearchPage extends Component {
           <ul>
             {
               filteredEmails.map(({ node }) => (
-                <li key={node.idPage}>
-                  <Link to="/author" state={node}>{node.nameRu}</Link>
-                </li>
+                <DirectorCardSearch key={node.idPage} state={node} language={language} />
               ))
              }
           </ul>
