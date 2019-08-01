@@ -5,7 +5,7 @@ import DirectorCard from '../components/directorCard/directorCard';
 import Footer from '../components/Footer/Footer';
 import '../language';
 
-const Main = () => (
+const Main = ({ language }) => (
   <Fragment>
     <main className="main-section">
       <section className="portal-description-section">
@@ -25,7 +25,7 @@ const Main = () => (
         </div>
       </section>
       <section className="director-card-section">
-        <DirectorCard />
+        <DirectorCard lang={language.charAt(0).toUpperCase() + language.slice(1)} />
       </section>
     </main>
     <Footer />
