@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation, Trans } from 'react-i18next';
 
 import { makeStyles } from '@material-ui/core/styles';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
@@ -69,7 +69,7 @@ const Header = ({ lang, changeLang }) => {
 
   const { t, i18n } = useTranslation();
 
-  const changeLanguage = lng => {
+  const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
 
@@ -87,9 +87,9 @@ const Header = ({ lang, changeLang }) => {
     <AppBar position="static" className={`header-section ${classes.root}`}>
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-            <Trans>
+          <Trans>
               Culture Portal
-            </Trans>
+          </Trans>
         </Typography>
         <Link to="/search">
           <Button className={classes.button} color="primary">All Directors</Button>
