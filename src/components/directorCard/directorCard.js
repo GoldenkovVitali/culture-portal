@@ -1,29 +1,96 @@
 import React from 'react';
 import './directorCard.scss';
-
+import { StaticQuery, graphql, Link } from "gatsby";
 
 export default class DirectorCard extends React.Component {
+
+  constructor() {
+    super();
+    this.state = { val: Math.floor(Math.random() * 5) };
+  }
+
   render() {
     return (
-      <div className="director-card">
-        <div className="director-card__image">
-          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/fa48f282735235.5d266fe2f1b44.jpg" alt="director photo" />
-        </div>
-        <div className='director-card__card'>
-        <div className="director-card__info">
-          <div className="director-card__info-main">
-            <h3>Marizza Bosquez</h3>
-            <hr align="center" width="80" size="0.5" />
-            <p className="director-card__info-birth">6 June 1955 - xxx</p>
-          </div>
-          <div className="director-card__info-description">
-            <p>Having portuguese roots and a deep professional background, Marizza knows exactly how to embrace your natural beauty and emphasize your finest features.</p>
-          </div>
-          <button className="director-card__learn-more-button" type="button"><span>learn more</span></button>
-        </div>
-        </div>
-
-      </div>
+      <StaticQuery
+        query={graphql`
+        query {
+          allContentfulPerson {
+            edges {
+              node {
+                id
+                idPage
+                nameRu
+                nameBy
+                nameEn
+                yearsOfLife
+                img {
+                  file {
+                    url
+                  }
+                }
+                cityRu
+                cityBy
+                cityEn
+                descriptionRu
+                descriptionBy
+                descriptionEn
+                timelineRu {
+                  date
+                  info
+                }
+                timelineBy {
+                  date
+                  info
+                }
+                timelineEn {
+                  date
+                  info
+                }
+                worksRu {
+                  date
+                  info
+                }
+                worksBy {
+                  date
+                  info
+                }
+                worksEn {
+                  date
+                  info
+                }
+                gallery {
+                  file {
+                    url
+                  }
+                }
+                map
+                youtube
+              }
+            }
+          }
+        }
+      `}
+        render={data => (
+          <article>
+            <div className="director-card">
+              <div className="director-card__image">
+                <img src={data.allContentfulPerson.edges[this.state.val].node.img.file.url} alt="director photo" />
+              </div>
+              <div className="director-card__info">
+                <div className="director-card__info-main">
+                  <p>{data.allContentfulPerson.edges[this.state.val].node.nameRu}</p>
+                  <p className="director-card__info-birth">{data.allContentfulPerson.edges[this.state.val].node.yearsOfLife}</p>
+                </div>
+                <hr align="center" width="80" size="0.5" />
+                <div className="director-card__info-description">
+                  <p>{data.allContentfulPerson.edges[this.state.val].node.descriptionRu}</p>
+                </div>
+                <Link className="director-card__learn-more-button" to={'/author'} state={data.allContentfulPerson.edges[this.state.val].node}><span>learn more</span></Link>
+              </div>
+            </div>
+          </article>
+        )}
+      />
     );
   }
 }
