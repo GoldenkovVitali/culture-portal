@@ -15,6 +15,9 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-sass',
+    },
+    {
+      resolve: 'gatsby-plugin-layout',
     }
   ]
 }

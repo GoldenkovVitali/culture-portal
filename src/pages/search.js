@@ -1,35 +1,47 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
+import { graphql } from 'gatsby';
+import SearchInput, { createFilter } from 'react-search-input';
+import DirectorCardSearch from '../components/DirectorCardSearch/DirectorCardSearch';
 import '../scss/generic.scss';
 import '../scss/search.scss';
-import { Link, graphql } from "gatsby";
 
-const SearchPage = ({ data }) => {
+class SearchPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchTerm: '',
+    };
+  }
 
-  console.log(data);
+  searchUpdated = (term) => {
+    this.setState({ searchTerm: term });
+  }
 
-  return (
-    <div className="search-wrapper">
-      <header className="header-section">header</header>
-      <section className="search-section">search bar</section>
+  render() {
+    const { data, language } = this.props;
+    const { searchTerm } = this.state;
+    const keysToFilter = [
+      `node.name${language.charAt(0).toUpperCase()}${language.slice(1)}`,
+      `node.city${language.charAt(0).toUpperCase()}${language.slice(1)}`];
+    const filteredEmails = data
+      .allContentfulPerson
+      .edges.filter(createFilter(searchTerm, keysToFilter));
 
-      <section className="list-section">
-        <h2>Genereate Links by GraphQl:</h2>
-        <ul>
+    return (
+      <Fragment>
+        <section className="search-section">
+          <SearchInput className="search-input" onChange={this.searchUpdated} />
+        </section>
+        <section className="main-section">
           {
-
-            data.allContentfulPerson.edges.map(({ node }) => (
-              <li key={node.idPage}>
-                <Link to={'/author'} state={node}>{node.nameRu}</Link>
-              </li>
+            filteredEmails.map(({ node }) => (
+              <DirectorCardSearch key={node.idPage} state={node} language={language} />
             ))
-
           }
-        </ul>
-      </section>
-
-      <main className="main-section">cards</main>
-    </div>
-  );
+        </section>
+      </Fragment>
+    );
+  }
 }
 
 export default SearchPage;
@@ -91,4 +103,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
