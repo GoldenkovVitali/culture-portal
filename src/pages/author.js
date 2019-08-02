@@ -37,16 +37,16 @@ const AuthorPage = (_data) => {
 
   return (
     <Fragment>
-      { data && data.location.state ? (
+      {data && data.location.state ? (
         <Fragment>
           <aside className="author-card-section">author card</aside>
           <main className="main-section">
             <section className="biography">
-          biography
+              biography
               <ModalVideoContainer link={data.location.state.youtube} />
             </section>
             <section className="timeline-container">
-              <TimelineContainer data={data.location.state} />
+              <TimelineContainer data={data.location.state} lang={_data.language} />
             </section>
             <section className="gallery">
               <Gallery />

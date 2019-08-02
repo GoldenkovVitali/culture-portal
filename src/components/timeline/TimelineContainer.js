@@ -2,7 +2,7 @@ import React from 'react';
 import '../../scss/author.scss';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 
-const TimelineContainer = ({ data }) => {
+const TimelineContainer = ({ data, lang }) => {
   const config = {
     style: {
       color: 'grey',
@@ -15,8 +15,8 @@ const TimelineContainer = ({ data }) => {
       boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
     },
   };
-  const { timelineEn } = data;
-  const timeline = timelineEn.map((it, index) => (
+
+  const timeline = data[`timeline${lang.charAt(0).toUpperCase()}${lang.slice(1)}`].map((it, index) => (
     <TimelineItem
       key={`${index + Date()}`}
       dateText={it.date}
