@@ -26,9 +26,6 @@ const useStyles = makeStyles(theme => ({
   bodyCell: {
     fontFamily: '\'Raleway\', sans-serif',
   },
-  table: {
-    minWidth: 650,
-  },
 }));
 
 const DirectorWorks = ({ data, lang }) => {
