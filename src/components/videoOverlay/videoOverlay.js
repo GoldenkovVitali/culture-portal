@@ -4,6 +4,7 @@ import '../../../node_modules/react-modal-video/scss/modal-video.scss';
 import { makeStyles } from '@material-ui/core/styles';
 import ModalVideo from 'react-modal-video';
 import { Button } from '@material-ui/core';
+import { Trans } from 'react-i18next';
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -23,7 +24,9 @@ const ModalVideoContainer = (props) => {
     <div>
       <ModalVideo channel="youtube" isOpen={isOpen} videoId={link} onClose={() => setIsOpen(false)} />
       <Button onClick={() => setIsOpen(true)} variant="contained" className={classes.button}>
-        Видео
+        <Trans>
+          Video
+        </Trans>
       </Button>
     </div>
   );
