@@ -20,7 +20,9 @@ class SearchPage extends Component {
   render() {
     const { data, language } = this.props;
     const { searchTerm } = this.state;
-    const keysToFilter = [`node.name${language.charAt(0).toUpperCase()}${language.slice(1)}`];
+    const keysToFilter = [
+      `node.name${language.charAt(0).toUpperCase()}${language.slice(1)}`,
+      `node.city${language.charAt(0).toUpperCase()}${language.slice(1)}`];
     const filteredEmails = data
       .allContentfulPerson
       .edges.filter(createFilter(searchTerm, keysToFilter));
