@@ -14,8 +14,8 @@ const PhotoGallery = ({ arrImageUrl }) => {
   ));
 
   return (
-    <div className="photo-gallery">
-      <Carousel autoPlay>{images}</Carousel>
+    <div className="wrapper-gallery">
+      <Carousel className="photo-gallery" autoPlay>{images}</Carousel>
     </div>
   );
 };

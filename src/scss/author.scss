@@ -47,6 +47,7 @@
     .gallery {
       display: flex;
       justify-content: center;
+      background: none !important;
       grid-area: gallery;
       background: $black-color;
     }
