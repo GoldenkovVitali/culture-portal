@@ -10,17 +10,35 @@
 
   .header-section {
     grid-area: header-section;
-    background: grey;
   }
 
   .search-section {
     grid-area: search-section;
-    background: grey;
+    display: flex;
+    justify-content: center;
+
+    .search-input {
+      width: 80%;
+
+      input {
+        width: 100%;
+        padding: 10px 15px;
+        outline: none;
+      }
+
+      input:focus {
+        border: 2px solid grey;
+      }
+    }
   }
 
   .main-section {
     grid-area: main-section;
-    background: grey;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin: 0 20px;
   }
 }
 

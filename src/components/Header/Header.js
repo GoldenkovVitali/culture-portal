@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation, Trans } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Paper from '@material-ui/core/Paper';
@@ -37,7 +37,6 @@ const useStyles = makeStyles(theme => ({
     color: blackColor,
     fontWeight: 'bold',
   },
-
   paper: {
     position: 'absolute',
     top: 36,
@@ -69,9 +68,9 @@ const Header = ({ lang, changeLang }) => {
     setOpen(false);
   };
 
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
-  const changeLanguage = lng => {
+  const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
 
@@ -87,11 +86,11 @@ const Header = ({ lang, changeLang }) => {
 
   return (
     <AppBar position="static" className={`header-section ${classes.root}`}>
-      <Toolbar className='header'>
+      <Toolbar className="header">
         <Typography variant="h6" className={classes.title}>
-            <Trans>
-              <img className='logo' src='https://i.ibb.co/KNxxKQ8/logo-6.png' />
-            </Trans>
+          <Trans>
+            <img className="logo" src="https://i.ibb.co/KNxxKQ8/logo-6.png" alt="Logo" />
+          </Trans>
         </Typography>
         <Link to="/search">
           <Button className={classes.button} color="primary">All Directors</Button>
