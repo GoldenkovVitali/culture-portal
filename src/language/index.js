@@ -8,6 +8,14 @@ i18n
     resources: {
       en: {
         translations: {
+          'Yury Chuchvaha': 'Yury Chuchvaha',
+          'Evgeniy Oleshkevich': 'Evgeniy Oleshkevich',
+          'Darya Novak': 'Darya Novak',
+          'Yauheni Dauhala': 'Yauheni Dauhala',
+          'Anton Yahorau': 'Anton Yahorau',
+          'Vadzim Zartaiski': 'Vadzim Zartaiski',
+          'Aliaksei Petrakou': 'Aliaksei Petrakou',
+          Developers: 'Developers:',
           'Year of creation': 'Year of creation',
           'List of works': 'List of works',
           Works: 'Works',
@@ -17,6 +25,14 @@ i18n
       },
       ru: {
         translations: {
+          'Yury Chuchvaha': 'Юрий Чучвага',
+          'Evgeniy Oleshkevich': 'Евгений Олешкевич',
+          'Darya Novak': 'Дарья Новак',
+          'Yauheni Dauhala': 'Евгений Довгало',
+          'Anton Yahorau': 'Антон Егоров',
+          'Vadzim Zartaiski': 'Вадим Зартайский',
+          'Aliaksei Petrakou': 'Алексей Петраков',
+          Developers: 'Разработчики:',
           'Year of creation': 'Год создания',
           'List of works': 'Список работ',
           Works: 'Работы',
@@ -26,6 +42,14 @@ i18n
       },
       by: {
         translations: {
+          'Yury Chuchvaha': 'Юрый Чучвага',
+          'Evgeniy Oleshkevich': 'Яўген Аляшкевіч',
+          'Darya Novak': 'Дар\'я Новак',
+          'Yauheni Dauhala': 'Яўген Даўгала',
+          'Anton Yahorau': 'Антон Ягораў',
+          'Vadzim Zartaiski': 'Вадзім Зартайскі',
+          'Aliaksei Petrakou': 'Аляксей Петракоў',
+          Developers: 'Распрацоўшчыкі:',
           'Year of creation': 'Год стварэння',
           'List of works': 'Спіс работ',
           Works: 'Работы',
