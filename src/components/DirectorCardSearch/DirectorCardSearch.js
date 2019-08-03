@@ -9,16 +9,19 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Trans } from 'react-i18next';
+import ModalVideoContainer from '../videoOverlay/videoOverlay'
+
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: 250,
+    maxWidth: 300,
     margin: '0 auto',
     display: 'flex',
     flexDirection: 'column',
+    borderRadius: 0,
   },
   media: {
-    height: 200,
+    height: 300,
     backgroundPosition: 'top',
   },
   button: {
@@ -33,7 +36,6 @@ const useStyles = makeStyles({
 const DirectorCardSearch = ({ state, language }) => {
   const classes = useStyles();
   const langCapitalized = `${language.charAt(0).toUpperCase()}${language.slice(1)}`;
-
   return (
     <Card className={classes.card}>
       <Link to="/author" state={state} className={classes.link}>
@@ -47,23 +49,24 @@ const DirectorCardSearch = ({ state, language }) => {
             <Typography gutterBottom variant="h5" component="h2">
               {state[`name${langCapitalized}`]}
             </Typography>
-            <Typography variant="body1" color="textSecondary" component="p">
+            <Typography className='date-of-life' variant="body1" color="textSecondary" component="p">
               {state.yearsOfLife}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography className='description' variant="body2" color="textSecondary" component="p">
               {state[`description${langCapitalized}`]}
             </Typography>
           </CardContent>
         </CardActionArea>
       </Link>
-      <CardActions>
+      <CardActions className='authors-buttons'>
         <Link to="/author" state={state} className={classes.link}>
-          <Button size="small" color="primary" className={classes.button}>
+          <Button className='learn-more-button' size="small" color="primary" className={classes.button}>
             <Trans>
               Learn more
             </Trans>
           </Button>
         </Link>
+        <ModalVideoContainer link={state.youtube} />
       </CardActions>
     </Card>
   );

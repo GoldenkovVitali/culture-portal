@@ -17,11 +17,21 @@
   .author-card-section {
     grid-area: author-card-section;
     background: $grey-color;
+
+    p {
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin-bottom: 0px;
+    }
   }
 
   .main-section {
     grid-area: main-section;
-    background: $grey-color;
     color: $white-color;
 
     display: grid;
@@ -31,6 +41,7 @@
       "biography"
       "timeline"
       "gallery"
+      "works"
       "map";
 
     .biography {
@@ -45,15 +56,29 @@
     }
 
     .gallery {
+      display: flex;
+      justify-content: center;
+      background: none !important;
       grid-area: gallery;
-      background: $black-color;
+    }
+
+    .works {
+      grid-area: works;
+      padding: 0 20px;
+
+      h3 {
+        color: $grey-color;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+      }
     }
 
     .map {
       height: 450px;
       grid-area: map;
-      background: $black-color;
     }
+
   }
 }
 

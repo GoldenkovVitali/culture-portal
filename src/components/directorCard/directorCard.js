@@ -78,7 +78,7 @@ export default class DirectorCard extends React.Component {
             </div>
             <div className="director-card__info">
               <div className="director-card__info-main">
-                <p>{data.allContentfulPerson.edges[this.state.val].node['name' + this.props.lang]}</p>
+                <h3>{data.allContentfulPerson.edges[this.state.val].node['name' + this.props.lang]}</h3>
                 <p className="director-card__info-birth">{data.allContentfulPerson.edges[this.state.val].node.yearsOfLife}</p>
               </div>
               <hr align="center" width="80" size="0.5" />
