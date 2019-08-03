@@ -49,7 +49,7 @@ const AuthorPage = (_data) => {
               <TimelineContainer data={data.location.state} lang={_data.language} />
             </section>
             <section className="gallery">
-              <Gallery />
+              <Gallery arrImageUrl={data.location.state.gallery} />
             </section>
             <Map content={data.location.state.map} />
           </main>
