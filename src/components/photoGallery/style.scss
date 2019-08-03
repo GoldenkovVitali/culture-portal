@@ -1,4 +1,15 @@
-.photo-gallery {
+.wrapper-gallery {
   display: inline-flex;
   max-width: 500px;
+
+  .carousel {
+    .carousel-status {
+      display: none;
+    }
+    .slide {
+      display: flex;
+      justify-content: center;
+      background: none !important;
+    }
+  }
 }
