@@ -8,6 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Trans } from 'react-i18next';
 import ModalVideoContainer from '../videoOverlay/videoOverlay'
 
 
@@ -60,10 +61,12 @@ const DirectorCardSearch = ({ state, language }) => {
       <CardActions className='authors-buttons'>
         <Link to="/author" state={state} className={classes.link}>
           <Button className='learn-more-button' size="small" color="primary" className={classes.button}>
-            Learn More
+            <Trans>
+              Learn more
+            </Trans>
           </Button>
         </Link>
-          <ModalVideoContainer link={state.youtube} />
+        <ModalVideoContainer link={state.youtube} />
       </CardActions>
     </Card>
   );
