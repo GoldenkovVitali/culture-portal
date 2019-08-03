@@ -21,7 +21,6 @@
 
   .main-section {
     grid-area: main-section;
-    background: $grey-color;
     color: $white-color;
 
     display: grid;
@@ -31,6 +30,7 @@
       "biography"
       "timeline"
       "gallery"
+      "works"
       "map";
 
     .biography {
@@ -49,13 +49,23 @@
       justify-content: center;
       background: none !important;
       grid-area: gallery;
-      background: $black-color;
+    }
+
+    .works {
+      grid-area: works;
+      padding: 0 20px;
+
+      h3 {
+        color: $grey-color;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+      }
     }
 
     .map {
       height: 450px;
       grid-area: map;
-      background: $black-color;
     }
   }
 }

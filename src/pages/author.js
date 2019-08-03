@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react';
-import '../scss/generic.scss';
-import '../scss/author.scss';
+import { Trans } from 'react-i18next';
 import Map from '../components/map/map';
 import Gallery from '../components/photoGallery';
 import ModalVideoContainer from '../components/videoOverlay/videoOverlay';
 import TimelineContainer from '../components/timeline/TimelineContainer';
+import DirectorWorks from '../components/DirectorWorks/DirectorWorks';
 import Page404 from '../components/page404/page404';
+import '../scss/generic.scss';
+import '../scss/author.scss';
 
 const AuthorPage = (_data) => {
   console.log('data', _data); // data in data.location.state
@@ -50,6 +52,10 @@ const AuthorPage = (_data) => {
             </section>
             <section className="gallery">
               <Gallery arrImageUrl={data.location.state.gallery} />
+            </section>
+            <section className="works">
+              <h3><Trans>List of works</Trans></h3>
+              <DirectorWorks data={data.location.state} lang={_data.language} />
             </section>
             <Map content={data.location.state.map} />
           </main>
