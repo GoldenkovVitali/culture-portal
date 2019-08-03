@@ -42,7 +42,7 @@ const AuthorPage = (_data) => {
       {data && data.location.state ? (
         <Fragment>
           <aside className="author-card-section">
-            <DirectorCardSearch key={storage.location.state.id} state={storage.location.state} language={data.language}  />
+            <DirectorCardSearch key={data.location.state.id} state={data.location.state} language={data.language}  />
           </aside>
           <main className="main-section">
             <section className="timeline-container">
