@@ -6,6 +6,7 @@ import ModalVideoContainer from '../components/videoOverlay/videoOverlay';
 import TimelineContainer from '../components/timeline/TimelineContainer';
 import DirectorWorks from '../components/DirectorWorks/DirectorWorks';
 import Page404 from '../components/page404/page404';
+import DirectorCardSearch from '../components/DirectorCardSearch/DirectorCardSearch';
 import '../scss/generic.scss';
 import '../scss/author.scss';
 
@@ -36,17 +37,16 @@ const AuthorPage = (_data) => {
       data = storage;
     }
   }
+  console.log(storage.location.state);
 
   return (
     <Fragment>
       {data && data.location.state ? (
         <Fragment>
-          <aside className="author-card-section">author card</aside>
+          <aside className="author-card-section">
+            <DirectorCardSearch key={storage.location.state.id} state={storage.location.state} language={data.language}  />
+          </aside>
           <main className="main-section">
-            <section className="biography">
-              biography
-              <ModalVideoContainer link={data.location.state.youtube} />
-            </section>
             <section className="timeline-container">
               <TimelineContainer data={data.location.state} lang={_data.language} />
             </section>
