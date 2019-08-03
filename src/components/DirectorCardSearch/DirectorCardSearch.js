@@ -8,8 +8,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import ModalVideoContainer from '../videoOverlay/videoOverlay'
+
 
 const useStyles = makeStyles({
   card: {
@@ -35,7 +35,6 @@ const useStyles = makeStyles({
 const DirectorCardSearch = ({ state, language }) => {
   const classes = useStyles();
   const langCapitalized = `${language.charAt(0).toUpperCase()}${language.slice(1)}`;
-
   return (
     <Card className={classes.card}>
       <Link to="/author" state={state} className={classes.link}>
@@ -60,14 +59,11 @@ const DirectorCardSearch = ({ state, language }) => {
       </Link>
       <CardActions className='authors-buttons'>
         <Link to="/author" state={state} className={classes.link}>
-          <Button size="small" color="primary" className={classes.button}>
+          <Button className='learn-more-button' size="small" color="primary" className={classes.button}>
             Learn More
           </Button>
-          </Link>
-          <Button size="small" color="primary" className={classes.button}>
-            <FontAwesomeIcon icon={faYoutube} />
-          </Button>
-
+        </Link>
+          <ModalVideoContainer link={state.youtube} />
       </CardActions>
     </Card>
   );

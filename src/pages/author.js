@@ -39,7 +39,8 @@ const AuthorPage = (_data) => {
     <Fragment>
       {data && data.location.state ? (
         <Fragment>
-          <aside className="author-card-section">author card</aside>
+          <aside className="author-card-section">
+          </aside>
           <main className="main-section">
             <section className="biography">
               biography
