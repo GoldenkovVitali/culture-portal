@@ -20,7 +20,7 @@ const GitHubProfile = (props) => {
 };
 
 GitHubProfile.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.instanceOf(Object).isRequired,
   git: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 };
