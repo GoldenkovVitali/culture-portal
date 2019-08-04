@@ -20,11 +20,11 @@ const useStyles = makeStyles(theme => ({
     background: greyColor,
   },
   headCell: {
-    fontFamily: '\'Playfair Display\', serif',
+    fontFamily: "'Playfair Display', serif",
     fontSize: '18px',
   },
   bodyCell: {
-    fontFamily: '\'Raleway\', sans-serif',
+    fontFamily: "'Raleway', sans-serif",
   },
 }));
 
@@ -38,7 +38,9 @@ const DirectorWorks = ({ data, lang }) => {
       <Table className={classes.table}>
         <TableHead className={classes.head}>
           <TableRow>
-            <TableCell className={classes.headCell}><Trans>Year of creation</Trans></TableCell>
+            <TableCell className={classes.headCell}>
+              <Trans>Year of creation</Trans>
+            </TableCell>
             <TableCell align="right" className={classes.headCell}>
               <Trans>Works</Trans>
             </TableCell>
@@ -46,11 +48,22 @@ const DirectorWorks = ({ data, lang }) => {
         </TableHead>
         <TableBody>
           {rows.map(row => (
-            <TableRow key={row.info.split('').slice(0, 10).join('')}>
-              <TableCell component="th" scope="row" className={classes.bodyCell}>
+            <TableRow
+              key={row.info
+                .split('')
+                .slice(0, 10)
+                .join('')}
+            >
+              <TableCell
+                component="th"
+                scope="row"
+                className={classes.bodyCell}
+              >
                 {row.date}
               </TableCell>
-              <TableCell align="right" className={classes.bodyCell}>{row.info}</TableCell>
+              <TableCell align="right" className={classes.bodyCell}>
+                {row.info}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

@@ -1,5 +1,5 @@
-import React from "react"
-import "./map.scss"
+import React from 'react';
+import './map.scss';
 
 const Map = ({ content }) => (
   <div className="map">
@@ -12,6 +12,6 @@ const Map = ({ content }) => (
       />
     ) : null}
   </div>
-)
+);
 
-export default Map
+export default Map;
