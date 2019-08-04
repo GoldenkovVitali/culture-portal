@@ -66,9 +66,9 @@ const AuthorPage = _data => {
         <Fragment>
           <aside className="author-card-section">
             <DirectorCardSearch
-              key={storage.location.state.id}
-              state={storage.location.state}
-              language={data.language}
+              key={data.location.state.id}
+              state={data.location.state}
+              language={_data.language}
             />
           </aside>
           <main className="main-section">
