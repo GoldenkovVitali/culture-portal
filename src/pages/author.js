@@ -11,11 +11,9 @@ import "../scss/generic.scss"
 import "../scss/author.scss"
 
 const AuthorPage = _data => {
-  console.log("data", _data) // data in data.location.state
+  let storage
 
-  let storage;
-
-  if (typeof window !== 'undefined' && window.localStorage) {
+  if (typeof window !== "undefined" && window.localStorage) {
     storage = JSON.parse(window.localStorage.getItem("culture-author"))
   }
 
@@ -34,7 +32,7 @@ const AuthorPage = _data => {
         storage.location.state.idPage
       ) {
         if (storage.location.state.idPage !== _data.location.state.idPage) {
-          if (typeof window !== 'undefined' && window.localStorage) {
+          if (typeof window !== "undefined" && window.localStorage) {
             window.localStorage.setItem("culture-author", JSON.stringify(_data))
             data = _data
           }
@@ -45,7 +43,7 @@ const AuthorPage = _data => {
         data = _data
       }
     } else {
-      if (typeof window !== 'undefined' && window.localStorage) {
+      if (typeof window !== "undefined" && window.localStorage) {
         window.localStorage.setItem("culture-author", JSON.stringify(_data))
         data = _data
       }
@@ -93,8 +91,8 @@ const AuthorPage = _data => {
           </main>
         </Fragment>
       ) : (
-          <Page404 />
-        )}
+        <Page404 />
+      )}
     </Fragment>
   )
 }
