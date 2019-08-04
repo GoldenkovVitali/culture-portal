@@ -7,7 +7,11 @@ export default class DirectorCard extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { val: Math.floor(Math.random() * 5) };
+    this.state = { val: 0 };
+  }
+
+  componentDidMount() {
+    this.setState({ val: Math.floor(Math.random() * 5) });
   }
 
   render() {
