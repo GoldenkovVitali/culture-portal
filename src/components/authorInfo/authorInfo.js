@@ -12,7 +12,6 @@ import ModalVideoContainer from '../videoOverlay/videoOverlay';
 
 const useStyles = makeStyles({
   card: {
-    margin: '0 30px',
     display: 'flex',
     flexDirection: 'column',
     borderRadius: 0,
