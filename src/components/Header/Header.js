@@ -89,7 +89,9 @@ const Header = ({ lang, changeLang }) => {
       <Toolbar className="header">
         <Typography variant="h6" className={classes.title}>
           <Trans>
-            <img className="logo" src="https://i.ibb.co/KNxxKQ8/logo-6.png" alt="Logo" />
+            <Link to="/">
+              <img className="logo" src="https://i.ibb.co/KNxxKQ8/logo-6.png" alt="Logo" />
+            </Link>
           </Trans>
         </Typography>
         <Link to="/search">
