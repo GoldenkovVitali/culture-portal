@@ -61,12 +61,7 @@ const AuthorPage = (_data) => {
           <aside className="author-card-section">
             <AuthorInfo key={data.location.state.id}
               state={data.location.state}
-              language={data.language}/>
-            {/* <DirectorCardSearch
-              key={data.location.state.id}
-              state={data.location.state}
-              language={data.language}
-            /> */}
+              language={_data.language}/>
           </aside>
           <main className="main-section">
             <section className="timeline-container">
