@@ -8,8 +8,14 @@ i18n
     resources: {
       en: {
         translations: {
-          "Culture Portal":
-            "Culture Portal",
+          'Yury Chuchvaha': 'Yury Chuchvaha',
+          'Evgeniy Oleshkevich': 'Evgeniy Oleshkevich',
+          'Darya Novak': 'Darya Novak',
+          'Yauheni Dauhala': 'Yauheni Dauhala',
+          'Anton Yahorau': 'Anton Yahorau',
+          'Vadzim Zartaiski': 'Vadzim Zartaiski',
+          'Aliaksei Petrakou': 'Aliaksei Petrakou',
+          Developers: 'Developers:',
           "All Directors":
             "All Directors",
           "Learn more":
@@ -27,8 +33,14 @@ i18n
       },
       ru: {
         translations: {
-          "Culture Portal":
-            "Культурный портал",
+          'Yury Chuchvaha': 'Юрий Чучвага',
+          'Evgeniy Oleshkevich': 'Евгений Олешкевич',
+          'Darya Novak': 'Дарья Новак',
+          'Yauheni Dauhala': 'Евгений Довгало',
+          'Anton Yahorau': 'Антон Егоров',
+          'Vadzim Zartaiski': 'Вадим Зартайский',
+          'Aliaksei Petrakou': 'Алексей Петраков',
+          Developers: 'Разработчики:',
           "All Directors":
             "Все режиссёры",
           "Learn more":
@@ -42,12 +54,18 @@ i18n
           Works: 'Работы',
           'Culture Portal':
             'Культурный портал',
-        }
+        },
       },
       by: {
         translations: {
-          "Culture Portal":
-            "Культурны партал",
+          'Yury Chuchvaha': 'Юрый Чучвага',
+          'Evgeniy Oleshkevich': 'Яўген Аляшкевіч',
+          'Darya Novak': 'Дар\'я Новак',
+          'Yauheni Dauhala': 'Яўген Даўгала',
+          'Anton Yahorau': 'Антон Ягораў',
+          'Vadzim Zartaiski': 'Вадзім Зартайскі',
+          'Aliaksei Petrakou': 'Аляксей Петракоў',
+          Developers: 'Распрацоўшчыкі:',
           "All Directors":
             "Усе рэжысёры",
           "Learn more":
@@ -56,11 +74,11 @@ i18n
             "Відэа",
           "About theatre director":
             "Тэатральны рэжысёр — асоба ў тэатры, якая паводле сваёй творчай задумы кіруе работай усіх удзельнікаў пастаноўкі (акцёраў, сцэнографа, кампазітара і інш.), знітоўвае ўсе элементы спектакля і падпарадкоўвае іх раскрыццю ідэйна-мастацкай сутнасці драматычнага твора. Рэжысёрская задума ўключае ідэйнае вытлумачэнне (інтэрпрэтацыю) п’есы, вызначэнне яе жанру, стылю і адпаведна манеру акцёрскага выканання, характарыстыку персанажаў, вырашэнне спектакля ў часе і прасторы (тэмп, рытм, мізансцэны, арганізацыя сцэнічнай пляцоўкі), а таксама прынцыпы мастацкага афармлення спектакля.",
-            'Year of creation': 'Год стварэння',
-            'List of works': 'Спіс работ',
-            Works: 'Работы',
-            'Culture Portal':
-              'Культурны партал',
+          'Year of creation': 'Год стварэння',
+          'List of works': 'Спіс работ',
+          Works: 'Работы',
+          'Culture Portal':
+            'Культурны партал',
         }
       }
     },

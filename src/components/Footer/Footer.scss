@@ -1,9 +1,16 @@
 .footer-section {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  background-color: #3c3937;
+
+  h2 {
+    color: #ffffff;
+    font-size: 14px;
+    margin: 20px 20px;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
 
-footer {
-  background-color: rgb(215,207,201);
-}

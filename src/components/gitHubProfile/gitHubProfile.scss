@@ -1,11 +1,12 @@
 .github-card-wrapper {
-  margin: 20px 5px 10px;
+  margin: 10px 5px 25px;
+  display: flex;
 
   .github-card {
     display: block;
     flex-direction: column;
-    height: 65px;
-    width: 65px;
+    height: 50px;
+    width: 50px;
     border-radius: 40px;
     overflow: hidden;
     box-sizing: border-box;
@@ -26,29 +27,27 @@
       height: 100%;
       position: absolute;
       top: 0;
-      background-color: #d7cfc9;
-      opacity: 0.3;
+      background-color: #3c3937;
+      opacity: 0.35;
     }
 
     .overlay:hover {
       opacity: 0;
     }
   }
+
   .label {
-    padding-top: 5px;
-    color: rgb(63, 61, 61);
     width: fit-content;
     line-height: 12px;
-    margin: auto;
+    margin: 10px;
     text-align: center;
   }
+
   .label p {
-    font-size: 1rem;
-    font-family: 'Playfair Display', serif;
-    color: rgb(255, 255, 255);
+    font-size: 12px;
+    color: #ffffff;
     padding: 0;
   }
-
 }
 
 
