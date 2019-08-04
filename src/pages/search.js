@@ -22,10 +22,11 @@ class SearchPage extends Component {
     const { searchTerm } = this.state;
     const keysToFilter = [
       `node.name${language.charAt(0).toUpperCase()}${language.slice(1)}`,
-      `node.city${language.charAt(0).toUpperCase()}${language.slice(1)}`];
-    const filteredEmails = data
-      .allContentfulPerson
-      .edges.filter(createFilter(searchTerm, keysToFilter));
+      `node.city${language.charAt(0).toUpperCase()}${language.slice(1)}`,
+    ];
+    const filteredEmails = data.allContentfulPerson.edges.filter(
+      createFilter(searchTerm, keysToFilter),
+    );
 
     return (
       <Fragment>
@@ -33,11 +34,13 @@ class SearchPage extends Component {
           <SearchInput className="search-input" onChange={this.searchUpdated} />
         </section>
         <section className="main-section">
-          {
-            filteredEmails.map(({ node }) => (
-              <DirectorCardSearch key={node.idPage} state={node} language={language} />
-            ))
-          }
+          {filteredEmails.map(({ node }) => (
+            <DirectorCardSearch
+              key={node.idPage}
+              state={node}
+              language={language}
+            />
+          ))}
         </section>
       </Fragment>
     );
