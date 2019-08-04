@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f55b1af5-89b1-427f-b4bc-47152821104e/deploy-status)](https://app.netlify.com/sites/culture-portal-uniorunr/deploys)
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
