@@ -19,12 +19,12 @@
     background: $grey-color;
 
     p {
-      font-family: 'Raleway', sans-serif;
+      font-family: "Raleway", sans-serif;
       text-align: center;
     }
 
     h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: "Playfair Display", serif;
       text-align: center;
       margin-bottom: 0px;
     }
@@ -69,16 +69,15 @@
       h3 {
         color: $grey-color;
         text-align: center;
-        font-family: 'Playfair Display', serif;
+        font-family: "Playfair Display", serif;
         font-size: 24px;
       }
     }
-
     .map {
-      height: 450px;
+      display: flex;
+      justify-content: center;
       grid-area: map;
     }
-
   }
 }
 
