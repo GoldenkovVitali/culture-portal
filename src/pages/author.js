@@ -12,7 +12,6 @@ import "../scss/author.scss"
 
 const AuthorPage = _data => {
   let storage
-
   if (typeof window !== "undefined" && window.localStorage) {
     storage = JSON.parse(window.localStorage.getItem("culture-author"))
   }
