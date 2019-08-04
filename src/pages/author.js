@@ -66,18 +66,22 @@ const AuthorPage = (_data) => {
           </aside>
           <main className="main-section">
             <section className="timeline-container">
+            <h3>BIOGRAPHY</h3>
               <TimelineContainer
                 data={data.location.state}
                 lang={_data.language}
               />
             </section>
             <section className="gallery">
+            <h3>GALLERY</h3>
               <Gallery arrImageUrl={data.location.state.gallery} />
             </section>
             <section className="works">
+            <h3>WORKS</h3>
               <DirectorWorks data={data.location.state} lang={_data.language} />
             </section>
             <section className="map">
+            <h3>MAP</h3>
               <Map content={data.location.state.map} />
             </section>
           </main>

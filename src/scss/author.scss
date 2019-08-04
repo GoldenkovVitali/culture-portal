@@ -1,7 +1,12 @@
 @import "colors";
 
 h3 {
-  color: red;
+  color:  #484745;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
 }
 
 .author-wrapper {
@@ -20,6 +25,7 @@ h3 {
 
   .author-card-section {
     grid-area: author-card-section;
+    background-color:#fafafafa;
 
     p {
       font-family: "Raleway", sans-serif;
@@ -31,6 +37,7 @@ h3 {
       text-align: center;
       margin-bottom: 0px;
     }
+
   }
 
   .main-section {
@@ -49,7 +56,6 @@ h3 {
 
     .biography {
       grid-area: biography;
-      background: $black-color;
     }
 
     .timeline {
@@ -63,6 +69,7 @@ h3 {
     .gallery {
       display: flex;
       justify-content: center;
+      flex-direction: column;
       background: none !important;
       grid-area: gallery;
     }
@@ -70,17 +77,12 @@ h3 {
     .works {
       grid-area: works;
       padding: 0 20px;
-
-      h3 {
-        color: $grey-color;
-        text-align: center;
-        font-family: "Playfair Display", serif;
-        font-size: 24px;
-      }
+      margin-bottom: 40px;
     }
     .map {
       display: flex;
       justify-content: center;
+      flex-direction: column;
       grid-area: map;
     }
   }
