@@ -9,6 +9,7 @@ import Page404 from "../components/page404/page404"
 import DirectorCardSearch from "../components/DirectorCardSearch/DirectorCardSearch"
 import "../scss/generic.scss"
 import "../scss/author.scss"
+import Footer from "../components/Footer/Footer";
 
 const AuthorPage = _data => {
   console.log("data", _data) // data in data.location.state
@@ -66,8 +67,8 @@ const AuthorPage = _data => {
         <Fragment>
           <aside className="author-card-section">
             <DirectorCardSearch
-              key={storage.location.state.id}
-              state={storage.location.state}
+              key={data.location.state.id}
+              state={data.location.state}
               language={data.language}
             />
           </aside>
@@ -82,9 +83,6 @@ const AuthorPage = _data => {
               <Gallery arrImageUrl={data.location.state.gallery} />
             </section>
             <section className="works">
-              <h3>
-                <Trans>List of works</Trans>
-              </h3>
               <DirectorWorks data={data.location.state} lang={_data.language} />
             </section>
             <section className="map">
