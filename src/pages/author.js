@@ -7,6 +7,7 @@ import Page404 from "../components/page404/page404"
 import DirectorCardSearch from "../components/DirectorCardSearch/DirectorCardSearch"
 import "../scss/generic.scss"
 import "../scss/author.scss"
+import AuthorInfo from "../components/authorInfo/authorInfo";
 
 const AuthorPage = (_data) => {
   let storage;
@@ -58,11 +59,14 @@ const AuthorPage = (_data) => {
       {data && data.location.state ? (
         <Fragment>
           <aside className="author-card-section">
-            <DirectorCardSearch
+            <AuthorInfo key={data.location.state.id}
+              state={data.location.state}
+              language={data.language}/>
+            {/* <DirectorCardSearch
               key={data.location.state.id}
               state={data.location.state}
               language={data.language}
-            />
+            /> */}
           </aside>
           <main className="main-section">
             <section className="timeline-container">
