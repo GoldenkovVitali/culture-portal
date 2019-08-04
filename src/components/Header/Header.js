@@ -93,7 +93,11 @@ const Header = ({ lang, changeLang }) => {
           </Trans>
         </Typography>
         <Link to="/search">
-          <Button className={classes.button} color="primary">All Directors</Button>
+          <Button className={classes.button} color="primary">
+            <Trans>
+            All Directors
+            </Trans>
+          </Button>
         </Link>
         <div className={classes.dropDownContainer}>
           <ClickAwayListener onClickAway={handleClickAway}>
