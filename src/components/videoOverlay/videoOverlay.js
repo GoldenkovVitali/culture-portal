@@ -4,8 +4,8 @@ import '../../../node_modules/react-modal-video/scss/modal-video.scss';
 import { makeStyles } from '@material-ui/core/styles';
 import ModalVideo from 'react-modal-video';
 import { Button } from '@material-ui/core';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -27,9 +27,18 @@ const ModalVideoContainer = (props) => {
   const classes = useStyles();
   return (
     <div>
-      <ModalVideo channel="youtube" isOpen={isOpen} videoId={link} onClose={() => setIsOpen(false)} />
-      <Button onClick={() => setIsOpen(true)} variant="contained" className={classes.button}>
-        <FontAwesomeIcon icon={faYoutube}/>
+      <ModalVideo
+        channel="youtube"
+        isOpen={isOpen}
+        videoId={link}
+        onClose={() => setIsOpen(false)}
+      />
+      <Button
+        onClick={() => setIsOpen(true)}
+        variant="contained"
+        className={classes.button}
+      >
+        <FontAwesomeIcon icon={faYoutube} />
       </Button>
     </div>
   );

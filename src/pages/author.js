@@ -8,53 +8,48 @@ import DirectorCardSearch from "../components/DirectorCardSearch/DirectorCardSea
 import "../scss/generic.scss"
 import "../scss/author.scss"
 
-const AuthorPage = _data => {
-  console.log("data", _data) // data in data.location.state
-
+const AuthorPage = (_data) => {
   let storage;
-
   if (typeof window !== 'undefined' && window.localStorage) {
-    storage = JSON.parse(window.localStorage.getItem("culture-author"))
+    storage = JSON.parse(window.localStorage.getItem('culture-author'));
   }
 
-  let data = null
+  let data = null;
 
   if (
-    _data &&
-    _data.location &&
-    _data.location.state &&
-    _data.location.state.idPage
+    _data
+    && _data.location
+    && _data.location.state
+    && _data.location.state.idPage
   ) {
     if (storage) {
       if (
-        storage.location &&
-        storage.location.state &&
-        storage.location.state.idPage
+        storage.location
+        && storage.location.state
+        && storage.location.state.idPage
       ) {
         if (storage.location.state.idPage !== _data.location.state.idPage) {
           if (typeof window !== 'undefined' && window.localStorage) {
-            window.localStorage.setItem("culture-author", JSON.stringify(_data))
-            data = _data
+            window.localStorage.setItem('culture-author', JSON.stringify(_data));
+            data = _data;
           }
         } else {
-          data = storage
+          data = storage;
         }
       } else {
-        data = _data
+        data = _data;
       }
-    } else {
-      if (typeof window !== 'undefined' && window.localStorage) {
-        window.localStorage.setItem("culture-author", JSON.stringify(_data))
-        data = _data
-      }
+    } else if (typeof window !== 'undefined' && window.localStorage) {
+      window.localStorage.setItem('culture-author', JSON.stringify(_data));
+      data = _data;
     }
   } else if (storage) {
     if (
-      storage.location &&
-      storage.location.state &&
-      storage.location.state.idPage
+      storage.location
+      && storage.location.state
+      && storage.location.state.idPage
     ) {
-      data = storage
+      data = storage;
     }
   }
 
@@ -88,10 +83,10 @@ const AuthorPage = _data => {
           </main>
         </Fragment>
       ) : (
-          <Page404 />
-        )}
+        <Page404 />
+      )}
     </Fragment>
-  )
-}
+  );
+};
 
-export default AuthorPage
+export default AuthorPage;
