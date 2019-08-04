@@ -12,7 +12,6 @@ export default class DirectorCard extends React.Component {
 
   componentDidMount() {
     this.setState({ val: Math.floor(Math.random() * 5) });
-    console.log('state', this.state.val);
   }
 
   render() {
