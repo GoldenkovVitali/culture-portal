@@ -1,13 +1,13 @@
-import React, { Fragment } from "react"
-import Map from "../components/map/map"
-import Gallery from "../components/photoGallery"
-import TimelineContainer from "../components/timeline/TimelineContainer"
-import DirectorWorks from "../components/DirectorWorks/DirectorWorks"
-import Page404 from "../components/page404/page404"
-import DirectorCardSearch from "../components/DirectorCardSearch/DirectorCardSearch"
-import "../scss/generic.scss"
-import "../scss/author.scss"
-import AuthorInfo from "../components/authorInfo/authorInfo";
+import React, { Fragment } from 'react';
+import { Trans } from 'react-i18next';
+import Map from '../components/map/map';
+import Gallery from '../components/photoGallery';
+import TimelineContainer from '../components/timeline/TimelineContainer';
+import DirectorWorks from '../components/DirectorWorks/DirectorWorks';
+import Page404 from '../components/page404/page404';
+import '../scss/generic.scss';
+import '../scss/author.scss';
+import AuthorInfo from '../components/authorInfo/authorInfo';
 
 const AuthorPage = (_data) => {
   let storage;
@@ -59,28 +59,30 @@ const AuthorPage = (_data) => {
       {data && data.location.state ? (
         <Fragment>
           <aside className="author-card-section">
-            <AuthorInfo key={data.location.state.id}
+            <AuthorInfo
+              key={data.location.state.id}
               state={data.location.state}
-              language={_data.language}/>
+              language={_data.language}
+            />
           </aside>
           <main className="main-section">
             <section className="timeline-container">
-            <h3>BIOGRAPHY</h3>
+              <h3><Trans>BIOGRAPHY</Trans></h3>
               <TimelineContainer
                 data={data.location.state}
                 lang={_data.language}
               />
             </section>
             <section className="gallery">
-            <h3>GALLERY</h3>
+              <h3><Trans>GALLERY</Trans></h3>
               <Gallery arrImageUrl={data.location.state.gallery} />
             </section>
             <section className="works">
-            <h3>WORKS</h3>
+              <h3><Trans>WORKS</Trans></h3>
               <DirectorWorks data={data.location.state} lang={_data.language} />
             </section>
             <section className="map">
-            <h3>MAP</h3>
+              <h3><Trans>MAP</Trans></h3>
               <Map content={data.location.state.map} />
             </section>
           </main>
