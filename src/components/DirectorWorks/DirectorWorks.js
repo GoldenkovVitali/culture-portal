@@ -15,13 +15,17 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(2),
     overflowX: 'auto',
+    border: '0.5px solid #484745',
+    boxShadow: 'none',
+    borderRadius: 0,
   },
   head: {
-    background: greyColor,
+    background: '#484745',
   },
   headCell: {
     fontFamily: "'Playfair Display', serif",
     fontSize: '18px',
+    color: '#ffffff'
   },
   bodyCell: {
     fontFamily: "'Raleway', sans-serif",

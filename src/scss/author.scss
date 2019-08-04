@@ -1,5 +1,14 @@
 @import "colors";
 
+h3 {
+  color:  #484745;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+
 .author-wrapper {
   font-size: 1rem;
   display: grid;
@@ -16,7 +25,7 @@
 
   .author-card-section {
     grid-area: author-card-section;
-    background: $grey-color;
+    background-color: rgb(72, 71, 69);
 
     p {
       font-family: "Raleway", sans-serif;
@@ -28,6 +37,7 @@
       text-align: center;
       margin-bottom: 0px;
     }
+
   }
 
   .main-section {
@@ -46,18 +56,20 @@
 
     .biography {
       grid-area: biography;
-      background: $black-color;
     }
 
     .timeline {
       grid-area: timeline;
       position: relative;
       display: block;
+      margin: 10px 0 50px 0;
+      padding: 0;
     }
 
     .gallery {
       display: flex;
       justify-content: center;
+      flex-direction: column;
       background: none !important;
       grid-area: gallery;
     }
@@ -65,17 +77,12 @@
     .works {
       grid-area: works;
       padding: 0 20px;
-
-      h3 {
-        color: $grey-color;
-        text-align: center;
-        font-family: "Playfair Display", serif;
-        font-size: 24px;
-      }
+      margin-bottom: 40px;
     }
     .map {
       display: flex;
       justify-content: center;
+      flex-direction: column;
       grid-area: map;
     }
   }

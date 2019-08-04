@@ -5,9 +5,9 @@ import Gallery from '../components/photoGallery';
 import TimelineContainer from '../components/timeline/TimelineContainer';
 import DirectorWorks from '../components/DirectorWorks/DirectorWorks';
 import Page404 from '../components/page404/page404';
-import DirectorCardSearch from '../components/DirectorCardSearch/DirectorCardSearch';
 import '../scss/generic.scss';
 import '../scss/author.scss';
+import AuthorInfo from '../components/authorInfo/authorInfo';
 
 const AuthorPage = (_data) => {
   let storage;
@@ -59,7 +59,7 @@ const AuthorPage = (_data) => {
       {data && data.location.state ? (
         <Fragment>
           <aside className="author-card-section">
-            <DirectorCardSearch
+            <AuthorInfo
               key={data.location.state.id}
               state={data.location.state}
               language={_data.language}
@@ -67,21 +67,22 @@ const AuthorPage = (_data) => {
           </aside>
           <main className="main-section">
             <section className="timeline-container">
+              <h3><Trans>BIOGRAPHY</Trans></h3>
               <TimelineContainer
                 data={data.location.state}
                 lang={_data.language}
               />
             </section>
             <section className="gallery">
+              <h3><Trans>GALLERY</Trans></h3>
               <Gallery arrImageUrl={data.location.state.gallery} />
             </section>
             <section className="works">
-              <h3>
-                <Trans>List of works</Trans>
-              </h3>
+              <h3><Trans>WORKS</Trans></h3>
               <DirectorWorks data={data.location.state} lang={_data.language} />
             </section>
             <section className="map">
+              <h3><Trans>MAP</Trans></h3>
               <Map content={data.location.state.map} />
             </section>
           </main>

@@ -89,11 +89,7 @@ const Header = ({ lang, changeLang }) => {
         <Typography variant="h6" className={classes.title}>
           <Trans>
             <Link to="/">
-              <img
-                className="logo"
-                src="https://i.ibb.co/KNxxKQ8/logo-6.png"
-                alt="Logo"
-              />
+              <img className="logo" src="https://i.ibb.co/ZBKmzVF/logo-8.png" alt="Logo" />
             </Link>
           </Trans>
         </Typography>

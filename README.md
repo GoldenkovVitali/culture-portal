@@ -17,4 +17,3 @@ Live version of the website - https://culture-portal-uniorunr.netlify.com
 2) [GatsbyJS](https://www.gatsbyjs.org/) (Static site generator)
 3) [GraphQL](https://graphql.org/) (Query language)
 4) [Contentful](https://www.contentful.com/) (Headless CMS)
-

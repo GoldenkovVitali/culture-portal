@@ -5,9 +5,6 @@ import './Footer.scss';
 
 const Footer = () => (
   <footer className="footer-section">
-    <h2>
-      <Trans>Developers</Trans>
-    </h2>
     <div className="cards">
       <GitHubProfile
         name={<Trans>Yury Chuchvaha</Trans>}
