@@ -1,10 +1,9 @@
 import React from 'react';
 import './directorCard.scss';
-import { StaticQuery, graphql, Link } from "gatsby";
+import { StaticQuery, graphql, Link } from 'gatsby';
 import { Trans } from 'react-i18next';
 
 export default class DirectorCard extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = { val: 0 };
@@ -18,82 +17,109 @@ export default class DirectorCard extends React.Component {
     return (
       <StaticQuery
         query={graphql`
-        query {
-          allContentfulPerson {
-            edges {
-              node {
-                id
-                idPage
-                nameRu
-                nameBy
-                nameEn
-                yearsOfLife
-                img {
-                  file {
-                    url
+          query {
+            allContentfulPerson {
+              edges {
+                node {
+                  id
+                  idPage
+                  nameRu
+                  nameBy
+                  nameEn
+                  yearsOfLife
+                  img {
+                    file {
+                      url
+                    }
                   }
-                }
-                cityRu
-                cityBy
-                cityEn
-                descriptionRu
-                descriptionBy
-                descriptionEn
-                timelineRu {
-                  date
-                  info
-                }
-                timelineBy {
-                  date
-                  info
-                }
-                timelineEn {
-                  date
-                  info
-                }
-                worksRu {
-                  date
-                  info
-                }
-                worksBy {
-                  date
-                  info
-                }
-                worksEn {
-                  date
-                  info
-                }
-                gallery {
-                  file {
-                    url
+                  cityRu
+                  cityBy
+                  cityEn
+                  descriptionRu
+                  descriptionBy
+                  descriptionEn
+                  timelineRu {
+                    date
+                    info
                   }
+                  timelineBy {
+                    date
+                    info
+                  }
+                  timelineEn {
+                    date
+                    info
+                  }
+                  worksRu {
+                    date
+                    info
+                  }
+                  worksBy {
+                    date
+                    info
+                  }
+                  worksEn {
+                    date
+                    info
+                  }
+                  gallery {
+                    file {
+                      url
+                    }
+                  }
+                  map
+                  youtube
                 }
-                map
-                youtube
               }
             }
           }
-        }
-      `}
+        `}
         render={data => (
           <div className="director-card">
             <div className="director-card__image">
-              <img src={data.allContentfulPerson.edges[this.state.val].node.img.file ? data.allContentfulPerson.edges[this.state.val].node.img.file.url : ""} alt="director photo" />
+              <img
+                src={
+                  data.allContentfulPerson.edges[this.state.val].node.img.file
+                    ? data.allContentfulPerson.edges[this.state.val].node.img
+                      .file.url
+                    : ''
+                }
+                alt="director photo"
+              />
             </div>
             <div className="director-card__info">
               <div className="director-card__info-main">
-                <h3>{data.allContentfulPerson.edges[this.state.val].node['name' + this.props.lang]}</h3>
-                <p className="director-card__info-birth">{data.allContentfulPerson.edges[this.state.val].node.yearsOfLife}</p>
+                <h3>
+                  {
+                    data.allContentfulPerson.edges[this.state.val].node[
+                      'name' + this.props.lang
+                    ]
+                  }
+                </h3>
+                <p className="director-card__info-birth">
+                  {
+                    data.allContentfulPerson.edges[this.state.val].node
+                      .yearsOfLife
+                  }
+                </p>
               </div>
               <hr align="center" width="80" size="0.5" />
               <div className="director-card__info-description">
-                <p>{data.allContentfulPerson.edges[this.state.val].node['description' + this.props.lang]}</p>
+                <p>
+                  {
+                    data.allContentfulPerson.edges[this.state.val].node[
+                      'description' + this.props.lang
+                    ]
+                  }
+                </p>
               </div>
-              <Link className="director-card__learn-more-button" to={'/author'} state={data.allContentfulPerson.edges[this.state.val].node}>
+              <Link
+                className="director-card__learn-more-button"
+                to="/author"
+                state={data.allContentfulPerson.edges[this.state.val].node}
+              >
                 <span>
-                  <Trans>
-                    Learn more
-                  </Trans>
+                  <Trans>Learn more</Trans>
                 </span>
               </Link>
             </div>

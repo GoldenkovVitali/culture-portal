@@ -16,7 +16,9 @@ const TimelineContainer = ({ data, lang }) => {
     },
   };
 
-  const timeline = data[`timeline${lang.charAt(0).toUpperCase()}${lang.slice(1)}`].map((it, index) => (
+  const timeline = data[
+    `timeline${lang.charAt(0).toUpperCase()}${lang.slice(1)}`
+  ].map((it, index) => (
     <TimelineItem
       key={`${index + Date()}`}
       dateText={it.date}
@@ -24,16 +26,10 @@ const TimelineContainer = ({ data, lang }) => {
       bodyContainerStyle={config.bodyContainerStyle}
       dateInnerStyle={config.dateInnerStyle}
     >
-      <p>
-        {it.info}
-      </p>
+      <p>{it.info}</p>
     </TimelineItem>
   ));
-  return (
-    <Timeline lineColor="#ddd">
-      {timeline}
-    </Timeline>
-  );
+  return <Timeline lineColor="#ddd">{timeline}</Timeline>;
 };
 
 export default TimelineContainer;

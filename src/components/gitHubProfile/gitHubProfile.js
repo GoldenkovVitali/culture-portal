@@ -7,7 +7,11 @@ const GitHubProfile = (props) => {
   return (
     <div className="github-card-wrapper">
       <div className="github-card">
-        <a href={`https://github.com/${git}`} target="_blank" rel="noopener noreferrer">
+        <a
+          href={`https://github.com/${git}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img className="github-card__image" src={image} alt="" />
           <div className="overlay" />
         </a>
